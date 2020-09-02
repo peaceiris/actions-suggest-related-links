@@ -9,6 +9,6 @@ jobs:
   train:
     runs-on: ubuntu-18.04
     steps:
-      - uses: peaceiris/actions-suggest-related-links/actions/train@v0.3.2
+      - uses: peaceiris/actions-suggest-related-links/actions/train@v0.4.0
         with:
           repository: 'peaceiris/actions-gh-pages'
