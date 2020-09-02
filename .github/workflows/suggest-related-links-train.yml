@@ -1,0 +1,14 @@
+name: 'Suggest Related Links Train'
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '13 13 * * */7'
+
+jobs:
+  train:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: peaceiris/actions-suggest-related-links/actions/train@v0.3.1
+        with:
+          repository: 'peaceiris/actions-gh-pages'

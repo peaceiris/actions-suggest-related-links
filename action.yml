@@ -1,0 +1,33 @@
+name: 'Suggest Related Links Action'
+description: 'A GitHub Action to suggest related or similar issues, documents, and links. Based on the power of NLP and fastText.'
+author: 'peaceiris'
+runs:
+  using: 'node12'
+  main: 'actions/suggest/dist/index.js'
+branding:
+  icon: 'link'
+  color: 'orange'
+inputs:
+  github_token:
+    description: 'Set a generated GITHUB_TOKEN for posting a comment.'
+    default: ${{ github.token }}
+    required: false
+  language:
+    description: 'Set a target language.'
+    default: 'en'
+    required: false
+  threshold:
+    description: 'Set a relevance threshold.'
+    default: '0.7'
+    required: false
+  max_links:
+    description: 'Set a maximum number of related links that are suggested.'
+    default: '3'
+    required: false
+  model:
+    description: 'Set a model for suggesting.'
+    default: 'fasttext'
+    required: false
+outputs:
+  json_path:
+    description: 'A path to a JSON file that contains results.'

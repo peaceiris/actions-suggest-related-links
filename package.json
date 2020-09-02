@@ -1,0 +1,87 @@
+{
+  "name": "actions-suggest-related-links",
+  "version": "0.3.1",
+  "description": "A GitHub Action to suggest related or similar issues, documents, and links. Based on the power of NLP and fastText.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=12.18.3",
+    "npm": ">=6.14.8"
+  },
+  "scripts": {
+    "node": "ts-node",
+    "all": "npm run format && npm run lint && npm test",
+    "lint": "eslint ./actions/**/*.ts",
+    "lint:fix": "eslint --fix ./actions/**/*.ts",
+    "test": "jest --coverage --verbose --detectOpenHandles",
+    "build": "npm run build:suggest && npm run build:train",
+    "build:suggest": "ncc build ./actions/suggest/src/index.ts -o ./actions/suggest/dist --minify",
+    "build:train": "ncc build ./actions/train/src/index.ts -o ./actions/train/dist --minify",
+    "tsc": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format:check": "prettier --check **/*.ts",
+    "release": "standard-version",
+    "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
+  },
+  "husky": {
+    "skipCI": true,
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "npm run update-deps; git remote prune origin"
+    }
+  },
+  "lint-staged": {
+    "{src,__tests__}/**/*.ts": [
+      "prettier --check",
+      "eslint"
+    ],
+    "README.md": [
+      "npx doctoc@1.4.0 --github"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peaceiris/actions-suggest-related-links.git"
+  },
+  "keywords": [
+    "GitHub Actions",
+    "Actions",
+    "JavaScript Action",
+    "TypeScript Action"
+  ],
+  "author": "peaceiris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peaceiris/actions-suggest-related-links/issues"
+  },
+  "homepage": "https://github.com/peaceiris/actions-suggest-related-links#readme",
+  "dependencies": {
+    "@actions/artifact": "^0.3.5",
+    "@actions/core": "^1.2.5",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^4.0.0",
+    "@actions/glob": "^0.1.0",
+    "@actions/io": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.12",
+    "@types/js-yaml": "^3.12.5",
+    "@types/node": "~14",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@vercel/ncc": "^0.24.0",
+    "eslint": "^7.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "jest": "^26.4.2",
+    "jest-circus": "^26.4.2",
+    "js-yaml": "^3.14.0",
+    "lint-staged": "^10.2.13",
+    "prettier": "2.1.1",
+    "standard-version": "^9.0.0",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}

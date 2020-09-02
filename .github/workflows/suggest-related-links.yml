@@ -1,0 +1,13 @@
+name: 'Suggest Related Links'
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+
+jobs:
+  suggest:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: peaceiris/actions-suggest-related-links@v0.3.1
