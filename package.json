@@ -9,7 +9,7 @@
   },
   "scripts": {
     "node": "ts-node",
-    "all": "npm run format && npm run lint && npm test",
+    "all": "npm run fmt && npm run lint && npm test",
     "lint": "eslint ./actions/**/*.ts",
     "lint:fix": "eslint --fix ./actions/**/*.ts",
     "test": "jest --coverage --verbose --detectOpenHandles",
@@ -17,8 +17,8 @@
     "build:suggest": "ncc build ./actions/suggest/src/index.ts -o ./actions/suggest/dist --minify",
     "build:train": "ncc build ./actions/train/src/index.ts -o ./actions/train/dist --minify",
     "tsc": "tsc",
-    "format": "prettier --write **/*.ts",
-    "format:check": "prettier --check **/*.ts",
+    "fmt": "prettier --write **/*.ts",
+    "fmt:check": "prettier --check **/*.ts",
     "release": "standard-version",
     "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
   },
