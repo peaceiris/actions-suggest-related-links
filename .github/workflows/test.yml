@@ -13,6 +13,7 @@ on:
 jobs:
   skipci:
     runs-on: ubuntu-18.04
+    if: github.event_name == 'push'
     steps:
       - run: echo "[skip ci] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
 

@@ -1,5 +1,6 @@
 import {context} from '@actions/github';
 import * as core from '@actions/core';
+import * as io from '@actions/io';
 // import * as exec from '@actions/exec';
 // import * as github from '@actions/github';
 import {Inputs} from './interfaces';
@@ -14,7 +15,15 @@ interface Repository {
   name: string;
 }
 
-interface IssueData {
+interface Issues {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+  fileName: string;
+  location: string;
+  fullPath: string;
+}
+
+interface Comments {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
   fileName: string;
@@ -35,21 +44,32 @@ export async function run(): Promise<void> {
       core.endGroup();
     }
 
-    core.startGroup('Fetch and save issues');
+    const tmpDir = path.join('/tmp', 'actions-suggest-related-links');
+    await io.mkdirP(tmpDir);
+
+    core.startGroup('Fetch and save issues and comments');
     const repoName: Array<string> = inps.Repository.split('/');
     const repository: Repository = {
       owner: repoName[0],
       name: repoName[1]
     };
     const githubAPI = new GitHubAPI(inps.GithubToken, repository.owner, repository.name);
-    const issueData: IssueData = {
+    const issues: Issues = {
       data: await githubAPI.getIssues(),
       fileName: 'issues.json',
-      location: '/tmp',
+      location: tmpDir,
       fullPath: ''
     };
-    issueData.fullPath = path.join(issueData.location, issueData.fileName);
-    fs.writeFileSync(issueData.fullPath, JSON.stringify(issueData.data));
+    issues.fullPath = path.join(issues.location, issues.fileName);
+    fs.writeFileSync(issues.fullPath, JSON.stringify(issues.data));
+    const comments: Comments = {
+      data: await githubAPI.getComments(),
+      fileName: 'comments.json',
+      location: tmpDir,
+      fullPath: ''
+    };
+    comments.fullPath = path.join(comments.location, comments.fileName);
+    fs.writeFileSync(comments.fullPath, JSON.stringify(comments.data));
     core.endGroup();
 
     core.startGroup('Upload training data as artifact');
@@ -58,9 +78,9 @@ export async function run(): Promise<void> {
       continueOnError: true
     };
     const uploadResult = await artifactClient.uploadArtifact(
-      issueData.fileName,
-      [issueData.fullPath],
-      issueData.location,
+      'training_data',
+      [issues.fullPath, comments.fullPath],
+      tmpDir,
       artifactOptions
     );
     core.info(`[INFO] ${uploadResult}`);

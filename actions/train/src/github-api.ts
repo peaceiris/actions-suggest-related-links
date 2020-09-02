@@ -22,4 +22,12 @@ export class GitHubAPI {
       state: 'all'
     });
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  async getComments(): Promise<any> {
+    return await this.githubClient.paginate(this.githubClient.issues.listCommentsForRepo, {
+      owner: this.owner,
+      repo: this.repo
+    });
+  }
 }
