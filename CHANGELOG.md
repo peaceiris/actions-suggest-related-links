@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.3.2 (2020-09-02)
+
+
+### chore
+
+* rename format to fmt [skip ci] ([81bc370](https://github.com/peaceiris/actions-suggest-related-links/commit/81bc37092528e01508ace97e114f1a0a0d7e61ad))
+
+### ci
+
+* bump [skip ci] ([09d7919](https://github.com/peaceiris/actions-suggest-related-links/commit/09d7919d9d627f8d1a42511ecffca8d966acc686))
+
+### deps
+
+* bump eslint from 7.8.0 to 7.8.1 [skip ci] ([df4f615](https://github.com/peaceiris/actions-suggest-related-links/commit/df4f6157d6ed90220fe44e0bf11c03dc2ac3a375))
+
+
+
 ## [0.3.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.3.0...v0.3.1) (2020-09-02)
 
 
