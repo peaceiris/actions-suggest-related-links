@@ -18,9 +18,10 @@
       "shd101wyy.markdown-preview-enhanced",
       "christian-kohler.path-intellisense",
       "lfs.vscode-emacs-friendly",
+      "ms-azuretools.vscode-docker",
       "dbaeumer.vscode-eslint",
       "firsttris.vscode-jest-runner",
-      "VisualStudioExptTeam.vscodeintellicode"
+      "VisualStudioExptTeam.vscodeintellicode",
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
