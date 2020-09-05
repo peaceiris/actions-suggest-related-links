@@ -8,7 +8,6 @@ with open("train.txt", "r") as f:
     terms = f.readlines()
 
 def remove_non_alphabet(terms):
-    terms = [i for i in terms if str(i).isdecimal() == False]
     terms = [re.sub('[:,.\$()]', '', str(i)) for i in terms]
     terms = [re.sub('^-$', '', str(i)) for i in terms]
     terms = [i.replace('"', '') for i in terms]
