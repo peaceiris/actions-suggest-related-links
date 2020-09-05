@@ -6,9 +6,11 @@ on:
       - main
     paths-ignore:
       - '*.md'
+      - 'models/**'
   pull_request:
     paths-ignore:
       - '*.md'
+      - 'models/**'
 
 jobs:
   skipci:
