@@ -9,6 +9,11 @@ jobs:
   train:
     runs-on: ubuntu-18.04
     steps:
-      - uses: peaceiris/actions-suggest-related-links/actions/train@v0.4.0
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Train
+        uses: peaceiris/actions-suggest-related-links/actions/train@v0.4.0
         with:
           repository: 'peaceiris/actions-gh-pages'
