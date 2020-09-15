@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.2](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.6.1...v0.6.2) (2020-09-15)
+
+
+### ci
+
+* pin v0.6.1 [skip ci] ([ed15663](https://github.com/peaceiris/actions-suggest-related-links/commit/ed15663edd2de9a8c861c435f3b4d23d759cd15e))
+
+### fix
+
+* training-data.json ([e039e59](https://github.com/peaceiris/actions-suggest-related-links/commit/e039e5914c28b7f6f9fa44428c4d306203557a5c))
+
+
+
 ## [0.6.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.6.0...v0.6.1) (2020-09-15)
 
 
