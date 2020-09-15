@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.2](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.5.1...v0.5.2) (2020-09-15)
+
+
+### ci
+
+* pin v0.5.1 [skip ci] ([187d7a3](https://github.com/peaceiris/actions-suggest-related-links/commit/187d7a3fb9d4e3a4faa76a9384a394093808c299))
+
+### feat
+
+* Validate event name and type ([91dc128](https://github.com/peaceiris/actions-suggest-related-links/commit/91dc12886f2cd82959a189379a714a5156e3dfaa))
+
+
+
 ## [0.5.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.5.0...v0.5.1) (2020-09-15)
 
 
