@@ -5,9 +5,14 @@ on:
     types:
       - opened
       - edited
+  workflow_dispatch:
+  schedule:
+    - cron: '13 13 * * */7'
 
 jobs:
-  suggest:
+  action:
     runs-on: ubuntu-18.04
     steps:
       - uses: peaceiris/actions-suggest-related-links@v0.4.0
+        with:
+          repository: 'peaceiris/actions-gh-pages'

@@ -2,7 +2,7 @@
   "name": "actions-suggest-related-links",
   "version": "0.4.0",
   "description": "A GitHub Action to suggest related or similar issues, documents, and links. Based on the power of NLP and fastText.",
-  "main": "lib/index.js",
+  "main": "actions/dist/index.js",
   "engines": {
     "node": ">=12.18.3",
     "npm": ">=6.14.8"
@@ -13,9 +13,7 @@
     "lint": "eslint ./actions/**/*.ts",
     "lint:fix": "eslint --fix ./actions/**/*.ts",
     "test": "jest --coverage --verbose --detectOpenHandles",
-    "build": "npm run build:suggest && npm run build:train",
-    "build:suggest": "ncc build ./actions/suggest/src/index.ts -o ./actions/suggest/dist --minify",
-    "build:train": "ncc build ./actions/train/src/index.ts -o ./actions/train/dist --minify",
+    "build": "ncc build ./actions/src/index.ts -o ./actions/dist --minify",
     "tsc": "tsc",
     "fmt": "prettier --write **/*.ts",
     "fmt:check": "prettier --check **/*.ts",

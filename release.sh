@@ -50,14 +50,12 @@ fi
 npm ci
 
 npm run build
-git add ./actions/suggest/dist/index.js
-git add ./actions/train/dist/index.js
+git add ./actions/dist/index.js
 git commit -m "chore(release): Add build assets"
 
 npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
 
-git rm ./actions/suggest/dist/index.js
-git rm ./actions/train/dist/index.js
+git rm ./actions/dist/index.js
 git commit -m "chore(release): Remove build assets [skip ci]"
 
 if [ "${CURRENT_BRANCH}" != "${DEFAULT_BRANCH}" ]; then

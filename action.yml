@@ -3,7 +3,7 @@ description: 'A GitHub Action to suggest related or similar issues, documents, a
 author: 'peaceiris'
 runs:
   using: 'node12'
-  main: 'actions/suggest/dist/index.js'
+  main: 'actions/dist/index.js'
 branding:
   icon: 'link'
   color: 'orange'
@@ -27,6 +27,18 @@ inputs:
   model:
     description: 'Set a model for suggesting.'
     default: 'fasttext'
+    required: false
+  repository:
+    description: 'Set a repository name of issue source. (e.g. peaceiris/actions-gh-pages)'
+    default: ${{ github.repository }}
+    required: false
+  custom_training_data:
+    description: 'Set paths to JSON files including custom training data.'
+    default: ''
+    required: false
+  train_issues:
+    description: 'Set this to true to train issue data.'
+    default: 'true'
     required: false
 outputs:
   json_path:
