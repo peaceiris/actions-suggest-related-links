@@ -58,7 +58,10 @@
     "@actions/exec": "^1.0.4",
     "@actions/github": "^4.0.0",
     "@actions/glob": "^0.1.0",
-    "@actions/io": "^1.0.2"
+    "@actions/io": "^1.0.2",
+    "mdast-util-to-string": "^1.1.0",
+    "remark-parse": "^8.0.3",
+    "unified": "^9.2.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.13",

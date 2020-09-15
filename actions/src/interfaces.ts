@@ -34,3 +34,10 @@ export interface Comments {
   location: string;
   fullPath: string;
 }
+
+export interface Issue {
+  html_url: string;
+  number: string;
+  title: string;
+  body: string;
+}
