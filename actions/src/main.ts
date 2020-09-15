@@ -58,7 +58,8 @@ export async function run(): Promise<void> {
         };
         trainingData.push(issue);
       });
-      fs.writeFileSync(path.join(tmpDir, 'training-data.json'), JSON.stringify(trainingData));
+      const trainingDataFullPath = path.join(tmpDir, 'training-data.json')
+      fs.writeFileSync(trainingDataFullPath, JSON.stringify(trainingData));
 
       // upload artifacts
       core.startGroup('Upload training data as artifact');
@@ -68,7 +69,7 @@ export async function run(): Promise<void> {
       };
       const uploadResult = await artifactClient.uploadArtifact(
         'training_data',
-        [repository.issues.fullPath, repository.comments.fullPath, 'training-data.json'],
+        [repository.issues.fullPath, repository.comments.fullPath, trainingDataFullPath],
         tmpDir,
         artifactOptions
       );
