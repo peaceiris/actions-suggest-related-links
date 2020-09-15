@@ -45,20 +45,20 @@ export async function run(): Promise<void> {
 
       // preprocessing
       const trainingData: Array<any> = []; // eslint-disable-line @typescript-eslint/no-explicit-any
-      Object.keys(repository.issues.data).forEach(data => {
+      repository.issues.data.forEach(data => {
         const tree = unified()
           .use(parse)
-          .parse((data as any).body); // eslint-disable-line @typescript-eslint/no-explicit-any
+          .parse(data.body.replace(/\r?\n/g, ' 45cnwy5ugwyeiurgywuer '));
         const textBody = toString(tree);
         const issue: Issue = {
-          html_url: (data as any).html_url, // eslint-disable-line @typescript-eslint/no-explicit-any
-          number: (data as any).number, // eslint-disable-line @typescript-eslint/no-explicit-any
-          title: (data as any).title, // eslint-disable-line @typescript-eslint/no-explicit-any
-          body: textBody
+          html_url: data.html_url,
+          number: data.number,
+          title: data.title,
+          body: textBody.replace(/45cnwy5ugwyeiurgywuer/g, ' ').replace(/\s+/g, ' ')
         };
         trainingData.push(issue);
       });
-      const trainingDataFullPath = path.join(tmpDir, 'training-data.json')
+      const trainingDataFullPath = path.join(tmpDir, 'training-data.json');
       fs.writeFileSync(trainingDataFullPath, JSON.stringify(trainingData));
 
       // upload artifacts
