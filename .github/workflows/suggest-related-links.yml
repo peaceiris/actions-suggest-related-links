@@ -13,6 +13,6 @@ jobs:
   action:
     runs-on: ubuntu-18.04
     steps:
-      - uses: peaceiris/actions-suggest-related-links@v0.6.1
+      - uses: peaceiris/actions-suggest-related-links@v0.6.2
         with:
           repository: 'peaceiris/actions-gh-pages'
