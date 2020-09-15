@@ -25,25 +25,46 @@ export async function run(): Promise<void> {
     const tmpDir = path.join('/tmp', 'actions-suggest-related-links');
     await io.mkdirP(tmpDir);
 
-    core.startGroup('Fetch and save issues and comments');
-    const repository: Repository = await fetchIssues(inps, tmpDir);
-    core.endGroup();
+    const eventName = context.eventName;
 
-    core.startGroup('Upload training data as artifact');
-    const artifactClient = artifact.create();
-    const artifactOptions: artifact.UploadOptions = {
-      continueOnError: true
-    };
-    const uploadResult = await artifactClient.uploadArtifact(
-      'training_data',
-      [repository.issues.fullPath, repository.comments.fullPath],
-      tmpDir,
-      artifactOptions
-    );
-    core.info(`[INFO] ${uploadResult}`);
-    core.endGroup();
+    if (eventName === 'workflow_dispatch' || eventName === 'schedule') {
+      // mode train
+      core.info(`[INFO] event: ${eventName}, mode: train`);
 
-    core.info('[INFO] Action successfully completed');
+      core.startGroup('Fetch and save issues and comments');
+      const repository: Repository = await fetchIssues(inps, tmpDir);
+      core.endGroup();
+
+      core.startGroup('Upload training data as artifact');
+      const artifactClient = artifact.create();
+      const artifactOptions: artifact.UploadOptions = {
+        continueOnError: true
+      };
+      const uploadResult = await artifactClient.uploadArtifact(
+        'training_data',
+        [repository.issues.fullPath, repository.comments.fullPath],
+        tmpDir,
+        artifactOptions
+      );
+      core.info(`[INFO] ${uploadResult}`);
+      core.endGroup();
+    } else if (eventName === 'issues') {
+      // mode predict
+      core.info(`[INFO] event: ${eventName}, mode: predict`);
+      const eventType = context.payload.action;
+      if (eventType === 'opened') {
+        core.info(`[INFO] event type: ${eventType}`);
+      } else if (eventType === 'edited') {
+        core.warning(`[WARN] ${eventType} event type is not supported`);
+      } else {
+        core.warning(`[WARN] ${eventType} event type is not supported`);
+      }
+    } else {
+      // unsupported event
+      core.warning(`[WARN] ${eventName} event is not supported`);
+    }
+
+    core.info('[INFO] completed successfully');
 
     return;
   } catch (e) {
