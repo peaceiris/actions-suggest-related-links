@@ -1,6 +1,6 @@
 {
   "name": "actions-suggest-related-links",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A GitHub Action to suggest related or similar issues, documents, and links. Based on the power of NLP and fastText.",
   "main": "actions/dist/index.js",
   "engines": {
