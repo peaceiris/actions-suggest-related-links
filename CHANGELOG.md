@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.5.0...v0.5.1) (2020-09-15)
+
+
+### feat
+
+* Split fetch-issues.ts ([ad2bbb0](https://github.com/peaceiris/actions-suggest-related-links/commit/ad2bbb096095d5864b92de241b1f555c66671f9c))
+
+
+
 # [0.5.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.4.0...v0.5.0) (2020-09-15)
 
 
