@@ -1,10 +1,16 @@
+import argparse
 import re
 import gensim
 from gensim import models
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-d","--document", type=str, required=True, help="path to documents")
+args = parser.parse_args()
+
+
 # open training sentences
-with open("train.txt", "r") as f:
+with open(args.document, "r") as f:
     terms = f.readlines()
 
 def remove_non_alphabet(terms):
@@ -36,6 +42,6 @@ terms = [TaggedDocument(doc, [labels[i]]) for i, doc in enumerate(terms)]
 model = models.Doc2Vec(terms, dm=0, vector_size=100, window=2, min_count=0, workers=4, epoch=10)
 
 # output results
-results = model.docvecs.most_similar('__label__31')
+results = model.docvecs.most_similar('doc/wiki/README.md')
 for result in results:
     print(result)
