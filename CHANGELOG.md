@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.7.0...v0.7.1) (2020-09-17)
+
+
+### ci
+
+* pin v0.7.0 [skip ci] ([604452a](https://github.com/peaceiris/actions-suggest-related-links/commit/604452a3568446ebb5264949378c17c3a16914ea))
+
+### fix
+
+* use md2text and removeSymbols ([58ece3d](https://github.com/peaceiris/actions-suggest-related-links/commit/58ece3d0525e5ddce8f7408b8446889545e584ce))
+
+
+
 # [0.7.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.6.2...v0.7.0) (2020-09-17)
 
 
