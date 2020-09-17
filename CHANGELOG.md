@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.11.0...v1.0.0) (2020-09-17)
+
+
+### feat
+
+* Add header and footer ([4a68804](https://github.com/peaceiris/actions-suggest-related-links/commit/4a68804e1164e108269704de8e688f9e723fe71f))
+
+
+
 # [0.11.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.10.0...v0.11.0) (2020-09-17)
 
 
