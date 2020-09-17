@@ -4,6 +4,8 @@ A GitHub Action to suggest related or similar issues, documents, and links. Base
 
 ![Suggest Related Links Action example result | peaceiris/actions-suggest-related-links](./images/example.jpg)
 
+Sometimes, users create a new issue that is similar to already opened or closed issues. When you face the issue, you need to find similar issues or related links and post it as a comment. That process is a pain, right? This action can do it instead of you!
+
 
 
 ## Table of Contents
