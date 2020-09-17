@@ -7,6 +7,7 @@ export interface Inputs {
   readonly Repository: string;
   readonly CustomTrainingData: string;
   readonly TrainIssues: boolean;
+  readonly Unclickable: boolean;
 }
 
 export interface CmdResult {

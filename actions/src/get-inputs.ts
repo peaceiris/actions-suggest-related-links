@@ -10,6 +10,7 @@ export function showInputs(inps: Inputs): void {
 [INFO] Repository: ${inps.Repository}
 [INFO] CustomTrainingData: ${inps.CustomTrainingData}
 [INFO] TrainIssues: ${inps.TrainIssues}
+[INFO] Unclickable: ${inps.Unclickable}
 `);
 }
 
@@ -22,7 +23,8 @@ export function getInputs(): Inputs {
     MaxLinks: core.getInput('max_links'),
     Repository: core.getInput('repository'),
     CustomTrainingData: core.getInput('custom_training_data'),
-    TrainIssues: (core.getInput('train_issues') || 'false').toUpperCase() === 'TRUE'
+    TrainIssues: (core.getInput('train_issues') || 'false').toUpperCase() === 'TRUE',
+    Unclickable: (core.getInput('unclickable') || 'false').toUpperCase() === 'TRUE'
   };
 
   return inps;

@@ -40,6 +40,10 @@ inputs:
     description: 'Set this to true to train issue data.'
     default: 'true'
     required: false
+  unclickable:
+    description: 'Set true to post unclickable links.'
+    default: 'false'
+    required: false
 outputs:
   json_path:
     description: 'A path to a JSON file that contains results.'

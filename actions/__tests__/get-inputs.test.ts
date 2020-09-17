@@ -46,6 +46,7 @@ function getInputsLog(inps: Inputs): string {
 [INFO] Repository: ${inps.Repository}
 [INFO] CustomTrainingData: ${inps.CustomTrainingData}
 [INFO] TrainIssues: ${inps.TrainIssues}
+[INFO] Unclickable: ${inps.Unclickable}
 `;
 }
 
@@ -72,6 +73,7 @@ describe('getInputs()', () => {
     expect(inps.Repository).toMatch('${{ github.repository }}');
     expect(inps.CustomTrainingData).toMatch('');
     expect(inps.TrainIssues).toBeTruthy();
+    expect(inps.Unclickable).toBeFalsy();
   });
 
   test('get spec inputs', () => {
@@ -83,6 +85,7 @@ describe('getInputs()', () => {
     process.env['INPUT_REPOSITORY'] = '${{ github.repository }}';
     process.env['INPUT_CUSTOM_TRAINING_DATA'] = '';
     process.env['INPUT_TRAIN_ISSUES'] = 'true';
+    process.env['INPUT_UNCLICKABLE'] = 'true';
 
     const inps: Inputs = getInputs();
 
@@ -95,5 +98,6 @@ describe('getInputs()', () => {
     expect(inps.Repository).toMatch('${{ github.repository }}');
     expect(inps.CustomTrainingData).toMatch('');
     expect(inps.TrainIssues).toBeTruthy();
+    expect(inps.Unclickable).toBeTruthy();
   });
 });
