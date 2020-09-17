@@ -18,6 +18,11 @@ jobs:
   action:
     runs-on: ubuntu-18.04
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "${GITHUB_CONTEXT}"
+
       - name: Setup Python
         if: github.event_name == 'issues' || github.event_name == 'pull_request'
         uses: actions/setup-python@v2.1.2
