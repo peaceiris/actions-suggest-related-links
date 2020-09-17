@@ -116,17 +116,28 @@ This action mainly consists of 5 parts: Data Collection, Preprocessing, Train mo
 
 ### Data Collection
 
-All issues of the repository are collected in JSON format based on the `GitHub API`. Issues include the title, body, and comments. Training Data is regularly collected using the scheduling function and output as an artifact and saved as a cache.
+All issues of the repository are collected in JSON format based on the `GitHub API`.
+Issues include the title, body, and comments.
+Training Data is regularly collected using the scheduling function and output as an artifact and saved as a cache.
 
 ### Preprocessing
 
-We convert markdown to text based on `unifiedjs`. At this time, symbols that are not alphabetic characters are deleted.
+We convert markdown to text based on [unified].
+At this time, symbols that are not alphabetic characters are deleted.
 
 - https://github.com/peaceiris/actions-suggest-related-links/blob/main/actions/src/preprocess.ts
 
+[unified]: https://unifiedjs.com/
+
 ### Train Model
 
-When the new issue is updated, the model is trained based on `fasttext`. In accordance with its name, fasttest has the advantage of very short inference times. We think training at GitHub Actions won't be an issue of execution time. In fact, in [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) repository, the training execution time was ???.
+When the new issue is updated, the model is trained based on [fastText].
+In accordance with its name, fasttest has the advantage of very short inference times.
+We think training at GitHub Actions won't be an issue of execution time.
+In the case of [GitHub Actions for GitHub Pages] repository, the training execution time is 1 sec. But installing time of dependencies takes 1 min, the total execution time is about 1.5 min.
+
+[fastText]: https://fasttext.cc/
+[GitHub Actions for GitHub Pages]: https://github.com/peaceiris/actions-gh-pages
 
 ### Find Similar Issues
 
