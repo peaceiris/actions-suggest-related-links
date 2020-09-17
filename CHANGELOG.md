@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.8](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.7...v0.8.8) (2020-09-17)
+
+
+### ci
+
+* Add Dump GitHub context [skip ci] ([531d33b](https://github.com/peaceiris/actions-suggest-related-links/commit/531d33bf0c40efc198b09c50078a7d0e764dd6e4))
+* Add fastText (#72) ([3eae5b8](https://github.com/peaceiris/actions-suggest-related-links/commit/3eae5b8aca02863b38e70731b858e36a7e652b04)), closes [#72](https://github.com/peaceiris/actions-suggest-related-links/issues/72)
+* fix path ([8b04804](https://github.com/peaceiris/actions-suggest-related-links/commit/8b048043e4632dbcf740a61b5f3b8b4dfe1dec38))
+* fix path [skip ci] ([9d00fae](https://github.com/peaceiris/actions-suggest-related-links/commit/9d00fae737862efd0a4cbeca89af2e12f28c9c9e))
+* fix path [skip ci] ([de19d8c](https://github.com/peaceiris/actions-suggest-related-links/commit/de19d8c5541dfd38b71309e60c81d9187d593f62))
+
+### docs
+
+* update README (#66) ([f45f8ef](https://github.com/peaceiris/actions-suggest-related-links/commit/f45f8ef0d43c9e21856a809d38d8b369634022cd)), closes [#66](https://github.com/peaceiris/actions-suggest-related-links/issues/66)
+
+### fix
+
+* change tmp dir ([c27160f](https://github.com/peaceiris/actions-suggest-related-links/commit/c27160f8ee5ae3818a0113bde52bd2523c3ca3bc))
+
+
+
 ## [0.8.7](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.6...v0.8.7) (2020-09-17)
 
 
