@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.5](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.4...v0.8.5) (2020-09-17)
+
+
+### ci
+
+* pin v0.8.5 [skip ci] ([79d9716](https://github.com/peaceiris/actions-suggest-related-links/commit/79d9716b7d683506c907c07c34e0a051c91cd69e))
+
+### fix
+
+* remove markdown table syntax ([2cab309](https://github.com/peaceiris/actions-suggest-related-links/commit/2cab309c4d9646f31e829f89fca6a95b4dc484d4))
+
+
+
 ## [0.8.4](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.3...v0.8.4) (2020-09-17)
 
 
