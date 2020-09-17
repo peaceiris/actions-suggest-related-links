@@ -1,3 +1,4 @@
 .ACCESS_TOKEN
 *.txt
+suggestions.json
 training_data/
