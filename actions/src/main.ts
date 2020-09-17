@@ -9,12 +9,7 @@ import {fetchIssues} from './fetch-issues';
 import path from 'path';
 import fs from 'fs';
 import * as artifact from '@actions/artifact';
-import 'unified';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const unified = require('unified');
-import parse from 'remark-parse';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const toString = require('mdast-util-to-string');
+import {md2text, removeSymbols} from './preprocess';
 
 export async function run(): Promise<void> {
   try {
@@ -46,15 +41,11 @@ export async function run(): Promise<void> {
       // preprocessing
       const trainingData: Array<any> = []; // eslint-disable-line @typescript-eslint/no-explicit-any
       repository.issues.data.forEach(data => {
-        const tree = unified()
-          .use(parse)
-          .parse(data.body.replace(/\r?\n/g, ' 45cnwy5ugwyeiurgywuer '));
-        const textBody = toString(tree);
         const issue: Issue = {
           html_url: data.html_url,
           number: data.number,
           title: data.title,
-          body: textBody.replace(/45cnwy5ugwyeiurgywuer/g, ' ').replace(/\s+/g, ' ')
+          body: removeSymbols(md2text(data.body))
         };
         trainingData.push(issue);
       });
