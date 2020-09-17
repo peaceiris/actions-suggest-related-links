@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.10.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.9.0...v0.10.0) (2020-09-17)
+
+
+### ci
+
+* fix input.txt ([1080808](https://github.com/peaceiris/actions-suggest-related-links/commit/10808086167df8ea5aa748648a0904afc64bb0b2))
+* fix path ([6f9eab7](https://github.com/peaceiris/actions-suggest-related-links/commit/6f9eab78954ef96acfc001be3a5dfcd8fb86c5e0))
+
+### feat
+
+* Add mode input ([b73bfe6](https://github.com/peaceiris/actions-suggest-related-links/commit/b73bfe654141c79c58d5cbe403335f83c8dd0821))
+
+### test
+
+* inputs ([7bb03ce](https://github.com/peaceiris/actions-suggest-related-links/commit/7bb03ce3357129ef0320bb8758d96744bbc654b5))
+
+
+
 # [0.9.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.8...v0.9.0) (2020-09-17)
 
 
