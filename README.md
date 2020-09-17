@@ -132,10 +132,12 @@ At this time, symbols that are not alphabetic characters are deleted.
 
 ### Train Model
 
-When the new issue is updated, the model is trained based on [fastText].
-In accordance with its name, fasttest has the advantage of very short inference times.
-We think training at GitHub Actions won't be an issue of execution time.
-In the case of [GitHub Actions for GitHub Pages] repository, the training execution time is 1 sec. But installing time of dependencies takes 1 min, the total execution time is about 1.5 min.
+When a new issue is created or updated, the fastText model is trained.
+In accordance with its name, fastText has the advantage of very short inference times.
+
+We think training time at the GitHub Actions runners won't be an issue.
+In the case of [GitHub Actions for GitHub Pages] repository, the training execution time is 1 sec.
+But installing time of dependencies takes 1 min, the total execution time is about 1.5 min.
 
 [fastText]: https://fasttext.cc/
 [GitHub Actions for GitHub Pages]: https://github.com/peaceiris/actions-gh-pages
