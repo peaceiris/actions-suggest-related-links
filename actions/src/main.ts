@@ -105,9 +105,6 @@ export async function run(): Promise<void> {
         // unsupported mode
         throw new Error(`${inps.Mode} mode is not supported`);
       }
-    } else {
-      // unsupported event
-      core.warning(`[WARN] ${eventName} event is not supported`);
     }
 
     core.info('[INFO] completed successfully');
