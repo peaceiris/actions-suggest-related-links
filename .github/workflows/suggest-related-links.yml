@@ -32,7 +32,9 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ~/actions-suggest-related-links-tmp
+          path: |
+            ~/.cache/pip
+            ~/actions-suggest-related-links-tmp
           key: ${{ runner.os }}-action-${{ hashFiles('~/actions-suggest-related-links-tmp/training-data.json') }}
           restore-keys: |
             ${{ runner.os }}-action-
@@ -56,8 +58,9 @@ jobs:
           cp ~/actions-suggest-related-links-tmp/training-data.json .
           echo '${{ github.event.issue.title }} ${{ github.event.issue.body }}' > input.txt
           python3 train.py -d training-data.json -test input.txt
+          cp ./suggestions.json ~/actions-suggest-related-links-tmp/
 
-      - uses: peaceiris/actions-suggest-related-links@v0.8.8
+      - uses: peaceiris/actions-suggest-related-links@v0.9.0
         if: github.event_name != 'pull_request'
         with:
           repository: 'peaceiris/actions-gh-pages'

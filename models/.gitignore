@@ -2,3 +2,4 @@
 *.txt
 suggestions.json
 training_data/
+fasttext/try-suggest.ts

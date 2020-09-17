@@ -74,7 +74,7 @@ export async function run(): Promise<void> {
       const eventType = context.payload.action;
       if (eventType === 'opened') {
         core.info(`[INFO] event type: ${eventType}`);
-        await suggest(inps);
+        await suggest(inps, tmpDir);
       } else if (eventType === 'edited') {
         core.warning(`[WARN] ${eventType} event type is not supported`);
       } else {
