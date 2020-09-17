@@ -12,6 +12,10 @@ inputs:
     description: 'Set a generated GITHUB_TOKEN for posting a comment.'
     default: ${{ github.token }}
     required: false
+  mode:
+    description: 'Set a save or suggest'
+    default: 'save'
+    required: false
   language:
     description: 'Set a target language.'
     default: 'en'

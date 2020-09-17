@@ -39,7 +39,10 @@ function assertWriteCalls(calls: string[]): void {
 
 function getInputsLog(inps: Inputs): string {
   return `\
+[INFO] Mode: ${inps.Mode}
 [INFO] Language: ${inps.Language}
+[INFO] Threshold: ${inps.Threshold}
+[INFO] MaxLinks: ${inps.MaxLinks}
 [INFO] Repository: ${inps.Repository}
 [INFO] CustomTrainingData: ${inps.CustomTrainingData}
 [INFO] TrainIssues: ${inps.TrainIssues}
@@ -62,11 +65,20 @@ describe('getInputs()', () => {
     const inps: Inputs = getInputs();
 
     expect(inps.GithubToken).toMatch('${{ github.token }}');
+    expect(inps.Mode).toMatch('save');
     expect(inps.Language).toMatch('en');
+    expect(inps.Threshold).toMatch('0.7');
+    expect(inps.MaxLinks).toMatch('3');
+    expect(inps.Repository).toMatch('${{ github.repository }}');
+    expect(inps.CustomTrainingData).toMatch('');
+    expect(inps.TrainIssues).toBeTruthy();
   });
 
   test('get spec inputs', () => {
     process.env['INPUT_GITHUB_TOKEN'] = 'xxx';
+    process.env['INPUT_MODE'] = 'suggest';
+    process.env['INPUT_THRESHOLD'] = '0.8';
+    process.env['INPUT_MAX_LINKS'] = '5';
     process.env['INPUT_LANGUAGE'] = 'ja';
     process.env['INPUT_REPOSITORY'] = '${{ github.repository }}';
     process.env['INPUT_CUSTOM_TRAINING_DATA'] = '';
@@ -75,6 +87,10 @@ describe('getInputs()', () => {
     const inps: Inputs = getInputs();
 
     expect(inps.GithubToken).toMatch('xxx');
+    expect(inps.Mode).toMatch('suggest');
+    expect(inps.Language).toMatch('ja');
+    expect(inps.Threshold).toMatch('0.8');
+    expect(inps.MaxLinks).toMatch('5');
     expect(inps.Language).toMatch('ja');
     expect(inps.Repository).toMatch('${{ github.repository }}');
     expect(inps.CustomTrainingData).toMatch('');

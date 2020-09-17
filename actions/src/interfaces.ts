@@ -1,6 +1,9 @@
 export interface Inputs {
   readonly GithubToken: string;
+  readonly Mode: string;
   readonly Language: string;
+  readonly Threshold: string;
+  readonly MaxLinks: string;
   readonly Repository: string;
   readonly CustomTrainingData: string;
   readonly TrainIssues: boolean;
