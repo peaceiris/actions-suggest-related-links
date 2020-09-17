@@ -24,10 +24,6 @@ inputs:
     description: 'Set a maximum number of related links that are suggested.'
     default: '3'
     required: false
-  model:
-    description: 'Set a model for suggesting.'
-    default: 'fasttext'
-    required: false
   repository:
     description: 'Set a repository name of issue source. (e.g. peaceiris/actions-gh-pages)'
     default: ${{ github.repository }}

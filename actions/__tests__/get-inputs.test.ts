@@ -40,7 +40,6 @@ function assertWriteCalls(calls: string[]): void {
 function getInputsLog(inps: Inputs): string {
   return `\
 [INFO] Language: ${inps.Language}
-[INFO] Model: ${inps.Model}
 [INFO] Repository: ${inps.Repository}
 [INFO] CustomTrainingData: ${inps.CustomTrainingData}
 [INFO] TrainIssues: ${inps.TrainIssues}
@@ -69,7 +68,6 @@ describe('getInputs()', () => {
   test('get spec inputs', () => {
     process.env['INPUT_GITHUB_TOKEN'] = 'xxx';
     process.env['INPUT_LANGUAGE'] = 'ja';
-    process.env['INPUT_MODEL'] = 'fasttext';
     process.env['INPUT_REPOSITORY'] = '${{ github.repository }}';
     process.env['INPUT_CUSTOM_TRAINING_DATA'] = '';
     process.env['INPUT_TRAIN_ISSUES'] = 'true';
@@ -78,7 +76,6 @@ describe('getInputs()', () => {
 
     expect(inps.GithubToken).toMatch('xxx');
     expect(inps.Language).toMatch('ja');
-    expect(inps.Model).toMatch('fasttext');
     expect(inps.Repository).toMatch('${{ github.repository }}');
     expect(inps.CustomTrainingData).toMatch('');
     expect(inps.TrainIssues).toBeTruthy();
