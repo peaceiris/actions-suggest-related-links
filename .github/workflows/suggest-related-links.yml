@@ -32,9 +32,7 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: |
-            ~/.cache/pip
-            ~/actions-suggest-related-links-tmp
+          path: ~/actions-suggest-related-links-tmp
           key: ${{ runner.os }}-action-${{ hashFiles('~/actions-suggest-related-links-tmp/training-data.json') }}
           restore-keys: |
             ${{ runner.os }}-action-
