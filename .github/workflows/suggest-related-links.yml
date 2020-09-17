@@ -62,4 +62,4 @@ jobs:
         with:
           mode: 'suggest'
           repository: 'peaceiris/actions-gh-pages'
-          # unclickable: true
+          unclickable: true
