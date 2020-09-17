@@ -37,6 +37,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-action-
 
+      - uses: peaceiris/actions-suggest-related-links@v0.10.0
+        if: github.event_name != 'pull_request'
+
       - name: Setup model
         if: github.event_name == 'issues' || github.event_name == 'pull_request'
         run: |
@@ -58,7 +61,8 @@ jobs:
           python3 train.py -d training-data.json -test input.txt
           cp ./suggestions.json ~/actions-suggest-related-links-tmp/
 
-      - uses: peaceiris/actions-suggest-related-links@v0.9.0
+      - uses: peaceiris/actions-suggest-related-links@v0.10.0
         if: github.event_name != 'pull_request'
         with:
+          mode: 'suggest'
           repository: 'peaceiris/actions-gh-pages'

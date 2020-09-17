@@ -32,7 +32,7 @@ export async function run(): Promise<void> {
     const eventName = context.eventName;
 
     if (eventName === 'workflow_dispatch' || eventName === 'schedule') {
-      // mode train
+      // save issues
       core.info(`[INFO] event: ${eventName}, mode: train`);
 
       // fetch issues and comments
@@ -69,16 +69,41 @@ export async function run(): Promise<void> {
       core.info(`[INFO] ${uploadResult}`);
       core.endGroup();
     } else if (eventName === 'issues') {
-      // mode suggest
-      core.info(`[INFO] event: ${eventName}, mode: suggest`);
-      const eventType = context.payload.action;
-      if (eventType === 'opened') {
-        core.info(`[INFO] event type: ${eventType}`);
-        await suggest(inps, tmpDir);
-      } else if (eventType === 'edited') {
-        core.warning(`[WARN] ${eventType} event type is not supported`);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const body = `${(context.payload.issue as any).body}`;
+
+      if (inps.Mode === 'save') {
+        // mode: save body
+        core.startGroup('Save input.txt');
+        const inputBody = (() => {
+          if (body === '') {
+            return 'context body is empty';
+          } else {
+            return removeSymbols(md2text(body));
+          }
+        })();
+        core.info(`[INFO] save input.txt`);
+        fs.writeFileSync(path.join(tmpDir, 'input.txt'), inputBody);
+        core.endGroup();
+      } else if (inps.Mode === 'suggest') {
+        // mode: suggest
+        core.info(`[INFO] event: ${eventName}, mode: suggest`);
+        if (body === '') {
+          core.info('[INFO] context body is empty, skip suggesting');
+          return;
+        }
+        const eventType = context.payload.action;
+        if (eventType === 'opened') {
+          core.info(`[INFO] event type: ${eventType}`);
+          await suggest(inps, tmpDir);
+        } else if (eventType === 'edited') {
+          core.warning(`[WARN] ${eventType} event type is not supported`);
+        } else {
+          core.warning(`[WARN] ${eventType} event type is not supported`);
+        }
       } else {
-        core.warning(`[WARN] ${eventType} event type is not supported`);
+        // unsupported mode
+        throw new Error(`${inps.Mode} mode is not supported`);
       }
     } else {
       // unsupported event
