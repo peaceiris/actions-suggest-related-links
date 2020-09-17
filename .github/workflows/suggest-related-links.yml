@@ -48,6 +48,14 @@ jobs:
           python3 -m pip install -r ./requirements.txt
           python3 -m pip check
 
+      - name: fastText
+        if: github.event_name == 'issues'
+        run: |
+          cd ./models/fasttext
+          cp /tmp/actions-suggest-related-links/training-data.json .
+          echo '${{ github.event.issue.title }} ${{ github.event.issue.body }}' > input.txt
+          python3 train.py -d training-data.json -test input.txt
+
       - uses: peaceiris/actions-suggest-related-links@v0.8.7
         if: github.event_name != 'pull_request'
         with:
