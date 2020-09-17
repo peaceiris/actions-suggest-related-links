@@ -24,6 +24,14 @@ jobs:
         with:
           python-version: '3.8'
 
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: /tmp/actions-suggest-related-links
+          key: ${{ runner.os }}-action-${{ hashFiles('/tmp/actions-suggest-related-links/training-data.json') }}
+          restore-keys: |
+            ${{ runner.os }}-action-
+
       - name: Setup model
         if: github.event_name == 'issues' || github.event_name == 'pull_request'
         run: |
