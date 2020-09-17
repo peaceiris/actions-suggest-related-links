@@ -8,11 +8,34 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '13 13 * * */7'
+  pull_request:
+    paths:
+      - '.github/workflows/suggest-related-links.yml'
+      - 'models/**'
+      - '!*.md'
 
 jobs:
   action:
     runs-on: ubuntu-18.04
     steps:
+      - name: Setup Python
+        if: github.event_name == 'issues' || github.event_name == 'pull_request'
+        uses: actions/setup-python@v2.1.2
+        with:
+          python-version: '3.8'
+
+      - name: Setup model
+        if: github.event_name == 'issues' || github.event_name == 'pull_request'
+        run: |
+          cd ~
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/peaceiris/actions-suggest-related-links.git
+          cd ./actions-suggest-related-links/models
+          # git checkout v1.0.0
+          # python3 -m pip install --upgrade pip
+          python3 -m pip install -r ./requirements.txt
+          python3 -m pip check
+
       - uses: peaceiris/actions-suggest-related-links@v0.8.6
+        if: github.event_name != 'pull_request'
         with:
           repository: 'peaceiris/actions-gh-pages'
