@@ -51,7 +51,7 @@ jobs:
       - name: fastText
         if: github.event_name == 'issues'
         run: |
-          cd ./models/fasttext
+          cd ./actions-suggest-related-links/models
           cp /tmp/actions-suggest-related-links/training-data.json .
           echo '${{ github.event.issue.title }} ${{ github.event.issue.body }}' > input.txt
           python3 train.py -d training-data.json -test input.txt
