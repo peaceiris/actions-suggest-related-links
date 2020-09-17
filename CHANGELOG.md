@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.2](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.1...v0.8.2) (2020-09-17)
+
+
+### ci
+
+* pin v0.8.1 [skip ci] ([02b2d8d](https://github.com/peaceiris/actions-suggest-related-links/commit/02b2d8d3a14336579d79e5f49fb6f9253b882b3b))
+* pin v0.8.2 [skip ci] ([a32a272](https://github.com/peaceiris/actions-suggest-related-links/commit/a32a2722a1ab04da7f59ae28df96d51110dfe97b))
+
+### fix
+
+* async await ([ef4b727](https://github.com/peaceiris/actions-suggest-related-links/commit/ef4b727a94bb4c8936a9aa64a2ce3966b7d7a6fc))
+
+
+
 ## [0.8.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.0...v0.8.1) (2020-09-17)
 
 
