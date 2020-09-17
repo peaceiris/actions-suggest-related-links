@@ -117,13 +117,13 @@ This action mainly consists of 5 parts: Data Collection, Preprocessing, Train mo
 
 ### Data Collection
 
-All issues of the repository are collected in JSON format based on the `GitHub API`.
-Issues include the title, body, and comments.
+All issues of the repository are collected with the GitHub API.
+The issues include the title, body, and comments.
 Training Data is regularly collected using the scheduling function and output as an artifact and saved as a cache.
 
 ### Preprocessing
 
-We convert markdown to text based on [unified].
+The Markdown format is converted to plain text with [unified].
 At this time, symbols that are not alphabetic characters are deleted.
 
 - https://github.com/peaceiris/actions-suggest-related-links/blob/main/actions/src/preprocess.ts
@@ -145,6 +145,8 @@ In the case of [GitHub Actions for GitHub Pages] repository, the training execut
 Calculate word vectors of training data and word vectors of posted data in fasttext. The cosine similarity is used to determine which word vectors of training data is close to the word vectors of the posted data. The higher the cosine similarity, the more similar the sentence.
 
 ### Suggest Issues
+
+![Suggest Related Links Action example result | peaceiris/actions-suggest-related-links](./images/example.jpg)
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
