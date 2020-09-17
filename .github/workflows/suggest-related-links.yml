@@ -43,7 +43,7 @@ jobs:
           python3 -m pip install -r ./requirements.txt
           python3 -m pip check
 
-      - uses: peaceiris/actions-suggest-related-links@v0.8.6
+      - uses: peaceiris/actions-suggest-related-links@v0.8.7
         if: github.event_name != 'pull_request'
         with:
           repository: 'peaceiris/actions-gh-pages'
