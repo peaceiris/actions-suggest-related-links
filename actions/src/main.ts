@@ -10,6 +10,7 @@ import path from 'path';
 import fs from 'fs';
 import * as artifact from '@actions/artifact';
 import {md2text, removeSymbols} from './preprocess';
+import {suggest} from './suggest';
 
 export async function run(): Promise<void> {
   try {
@@ -67,11 +68,12 @@ export async function run(): Promise<void> {
       core.info(`[INFO] ${uploadResult}`);
       core.endGroup();
     } else if (eventName === 'issues') {
-      // mode predict
-      core.info(`[INFO] event: ${eventName}, mode: predict`);
+      // mode suggest
+      core.info(`[INFO] event: ${eventName}, mode: suggest`);
       const eventType = context.payload.action;
       if (eventType === 'opened') {
         core.info(`[INFO] event type: ${eventType}`);
+        suggest(inps, 'Hello GitHub Actions');
       } else if (eventType === 'edited') {
         core.warning(`[WARN] ${eventType} event type is not supported`);
       } else {

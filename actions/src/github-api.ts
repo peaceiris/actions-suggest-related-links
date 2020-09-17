@@ -1,5 +1,5 @@
 import {getOctokit} from '@actions/github';
-import {GitHub} from '@actions/github/lib/utils';
+import {context, GitHub} from '@actions/github/lib/utils';
 
 export class GitHubAPI {
   private readonly githubToken: string;
@@ -28,6 +28,15 @@ export class GitHubAPI {
     return await this.githubClient.paginate(this.githubClient.issues.listCommentsForRepo, {
       owner: this.owner,
       repo: this.repo
+    });
+  }
+
+  createComment(body: string): void {
+    this.githubClient.issues.createComment({
+      issue_number: context.issue.number,
+      owner: context.repo.owner,
+      repo: context.repo.repo,
+      body: body
     });
   }
 }
