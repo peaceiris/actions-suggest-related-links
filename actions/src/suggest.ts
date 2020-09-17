@@ -8,6 +8,7 @@ export async function suggest(inps: Inputs, tmpDir: string): Promise<void> {
   const results = JSON.parse(fs.readFileSync(path.join(tmpDir, 'suggestions.json'), 'utf8'));
   const topNcount = Number(inps.MaxLinks);
   let commentBody = '';
+  commentBody += 'Related links:\n';
   if (inps.Unclickable) {
     commentBody += '```\n';
   }
@@ -19,6 +20,10 @@ export async function suggest(inps: Inputs, tmpDir: string): Promise<void> {
   if (inps.Unclickable) {
     commentBody += '```\n';
   }
+  commentBody +=
+    `[Log](${process.env['GITHUB_SERVER_URL']}/` +
+    `${process.env['GITHUB_REPOSITORY']}/` +
+    `actions/runs/${process.env['GITHUB_RUN_ID']})\n`;
 
   const githubAPI = new GitHubAPI(inps.GithubToken, context.repo.owner, context.repo.repo);
   await githubAPI.createComment(commentBody);
