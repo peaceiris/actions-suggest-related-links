@@ -94,6 +94,7 @@ jobs:
 ### Save Issues Data
 
 Run It manually only the first time to save issues data.
+After the first running, it will be automatically executed following the setting of the `schedule.cron`.
 
 ![Run workflow manually to save issues data | peaceiris/actions-suggest-related-links](./images/manually.jpg)
 
