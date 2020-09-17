@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.8.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.7.1...v0.8.0) (2020-09-17)
+
+
+### ci
+
+* pin v0.7.1 [skip ci] ([03a235f](https://github.com/peaceiris/actions-suggest-related-links/commit/03a235f21dda0a1049e820c633dc0ec6edf1a8e5))
+* pin v0.8.0 [skip ci] ([4c2312f](https://github.com/peaceiris/actions-suggest-related-links/commit/4c2312f8c16a640a901d4a1fed178b6a068b9e3b))
+
+### feat
+
+* Post comment (#58) ([b6cd3c3](https://github.com/peaceiris/actions-suggest-related-links/commit/b6cd3c3ed413829fdb5a60c62beb7fa1eaacf5e0)), closes [#58](https://github.com/peaceiris/actions-suggest-related-links/issues/58)
+
+### model
+
+* Add doc2vec (#48) ([5e13233](https://github.com/peaceiris/actions-suggest-related-links/commit/5e132331ef929dd5c5ba3161dc5b7c73ead5dbad)), closes [#48](https://github.com/peaceiris/actions-suggest-related-links/issues/48)
+
+
+
 ## [0.7.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.7.0...v0.7.1) (2020-09-17)
 
 
