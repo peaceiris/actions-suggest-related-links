@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.7](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.6...v0.8.7) (2020-09-17)
+
+
+### ci
+
+* Add cache step (#67) ([ba5a88b](https://github.com/peaceiris/actions-suggest-related-links/commit/ba5a88b16908d5c278dea375e857a7069df04976)), closes [#67](https://github.com/peaceiris/actions-suggest-related-links/issues/67)
+* Add Setup model step (#56) ([3c3a3e4](https://github.com/peaceiris/actions-suggest-related-links/commit/3c3a3e42cf31dde615f7e22ae40668785866b975)), closes [#56](https://github.com/peaceiris/actions-suggest-related-links/issues/56)
+* pin v0.8.7 [skip ci] ([ed5634f](https://github.com/peaceiris/actions-suggest-related-links/commit/ed5634fecd9affbd6aa0520d5ce2d5ebc2f16f2e))
+
+### feat
+
+* remove model input ([b99ec95](https://github.com/peaceiris/actions-suggest-related-links/commit/b99ec95fb2b4fa3c6b9e5ef63f794f909cc2532d))
+
+### fix
+
+* Body cannot be blank ([4d1b383](https://github.com/peaceiris/actions-suggest-related-links/commit/4d1b383411e399bcc83ae9a7658636789ddf4378))
+
+### model
+
+* fastText (#57) ([e10318a](https://github.com/peaceiris/actions-suggest-related-links/commit/e10318adade8c6535c717870da20e2fe6173333a)), closes [#57](https://github.com/peaceiris/actions-suggest-related-links/issues/57)
+
+
+
 ## [0.8.6](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.5...v0.8.6) (2020-09-17)
 
 
