@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.7.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.6.2...v0.7.0) (2020-09-17)
+
+
+### ci
+
+* pin v0.6.2 [skip ci] ([008a2dd](https://github.com/peaceiris/actions-suggest-related-links/commit/008a2dde02ec284108dd187e060fb9206fe2705e))
+* remove matrix.os ([5a84f81](https://github.com/peaceiris/actions-suggest-related-links/commit/5a84f817755fee7101d1c0a60115cdda0a4ff27e))
+
+### deps
+
+* bump @types/jest from 26.0.13 to 26.0.14 (#53) ([fec712f](https://github.com/peaceiris/actions-suggest-related-links/commit/fec712f2cd0ca50d0684cca93d9b6c19eae9ebb9)), closes [#53](https://github.com/peaceiris/actions-suggest-related-links/issues/53)
+* bump lint-staged from 10.3.0 to 10.4.0 (#54) ([a83de0d](https://github.com/peaceiris/actions-suggest-related-links/commit/a83de0d13b42a0eba51c4a7ca9d1fdc511d880d5)), closes [#54](https://github.com/peaceiris/actions-suggest-related-links/issues/54)
+* bump prettier from 2.1.1 to 2.1.2 (#50) ([8351d58](https://github.com/peaceiris/actions-suggest-related-links/commit/8351d588791acbd8f2f82f53214b9599c988dff9)), closes [#50](https://github.com/peaceiris/actions-suggest-related-links/issues/50)
+
+### feat
+
+* preprocess.ts (#49) ([32e0188](https://github.com/peaceiris/actions-suggest-related-links/commit/32e0188142153ee603c95e9384e3c5b3efeb1948)), closes [#49](https://github.com/peaceiris/actions-suggest-related-links/issues/49)
+
+
+
 ## [0.6.2](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.6.1...v0.6.2) (2020-09-15)
 
 
