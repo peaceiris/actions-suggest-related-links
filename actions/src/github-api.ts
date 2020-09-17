@@ -31,8 +31,8 @@ export class GitHubAPI {
     });
   }
 
-  createComment(body: string): void {
-    this.githubClient.issues.createComment({
+  async createComment(body: string): Promise<void> {
+    await this.githubClient.issues.createComment({
       issue_number: context.issue.number,
       owner: context.repo.owner,
       repo: context.repo.repo,
