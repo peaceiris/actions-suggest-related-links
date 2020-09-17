@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.9.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.8...v0.9.0) (2020-09-17)
+
+
+### feat
+
+* suggest links ([01f93fd](https://github.com/peaceiris/actions-suggest-related-links/commit/01f93fdbee265743ee6bfd5a0f582435fb42c78d))
+
+
+
 ## [0.8.8](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.7...v0.8.8) (2020-09-17)
 
 
