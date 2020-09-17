@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.3](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.2...v0.8.3) (2020-09-17)
+
+
+### ci
+
+* pin v0.8.3 [skip ci] ([5c8f4db](https://github.com/peaceiris/actions-suggest-related-links/commit/5c8f4dbf1be33c8b68632b00646ee9d71691c7f7))
+
+### fix
+
+* string type ([723cded](https://github.com/peaceiris/actions-suggest-related-links/commit/723cded9dd2596c2794f92f0e93266be3f981400))
+
+
+
 ## [0.8.2](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.8.1...v0.8.2) (2020-09-17)
 
 
