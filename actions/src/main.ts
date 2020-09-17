@@ -25,7 +25,8 @@ export async function run(): Promise<void> {
       core.endGroup();
     }
 
-    const tmpDir = path.join('/tmp', 'actions-suggest-related-links');
+    const userHome = `${process.env['HOME']}`;
+    const tmpDir = path.join(userHome, 'actions-suggest-related-links-tmp');
     await io.mkdirP(tmpDir);
 
     const eventName = context.eventName;

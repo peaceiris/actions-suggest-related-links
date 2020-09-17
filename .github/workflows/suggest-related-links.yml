@@ -32,8 +32,8 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: /tmp/actions-suggest-related-links
-          key: ${{ runner.os }}-action-${{ hashFiles('/tmp/actions-suggest-related-links/training-data.json') }}
+          path: ~/actions-suggest-related-links-tmp
+          key: ${{ runner.os }}-action-${{ hashFiles('~/actions-suggest-related-links-tmp/training-data.json') }}
           restore-keys: |
             ${{ runner.os }}-action-
 
@@ -41,6 +41,7 @@ jobs:
         if: github.event_name == 'issues' || github.event_name == 'pull_request'
         run: |
           cd ~
+          # git clone https://github.com/peaceiris/actions-suggest-related-links.git
           git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/peaceiris/actions-suggest-related-links.git
           cd ./actions-suggest-related-links/models
           # git checkout v1.0.0
@@ -52,14 +53,11 @@ jobs:
         if: github.event_name == 'issues'
         run: |
           cd ~/actions-suggest-related-links/models/fasttext
-          ls -la /tmp/actions-suggest-related-links || true
-          ls -la ${GITHUB_WORKSPACE}
-          ls -la ${GITHUB_WORKSPACE}/actions-suggest-related-links
-          cp ${GITHUB_WORKSPACE}/actions-suggest-related-links/training-data.json .
+          cp ~/actions-suggest-related-links-tmp/training-data.json .
           echo '${{ github.event.issue.title }} ${{ github.event.issue.body }}' > input.txt
           python3 train.py -d training-data.json -test input.txt
 
-      - uses: peaceiris/actions-suggest-related-links@v0.8.7
+      - uses: peaceiris/actions-suggest-related-links@v0.8.8
         if: github.event_name != 'pull_request'
         with:
           repository: 'peaceiris/actions-gh-pages'
