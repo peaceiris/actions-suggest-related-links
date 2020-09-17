@@ -144,7 +144,9 @@ But installing time of dependencies takes 1 min, the total execution time is abo
 
 ### Find Similar Issues
 
-Calculate word vectors of training data and word vectors of posted data in fasttext. The cosine similarity is used to determine which word vectors of training data is close to the word vectors of the posted data. The higher the cosine similarity, the more similar the sentence.
+Calculate word vectors of training data and word vectors of posted data in fastText.
+The cosine similarity is used to determine which word vectors of training data is close to the word vectors of the posted data.
+The higher the cosine similarity, the more similar the sentence.
 
 ### Suggest Issues
 
