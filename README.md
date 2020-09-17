@@ -10,6 +10,12 @@ A GitHub Action to suggest related or similar issues, documents, and links. Base
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
+- [Models](#models)
+  - [Data Collection](#data-collection)
+  - [Preprocessing](#preprocessing)
+  - [Train Model](#train-model)
+  - [Find Similar Issues](#find-similar-issues)
+  - [Suggest Issues](#suggest-issues)
 - [Maintainers](#maintainers)
 - [License](#license)
 
