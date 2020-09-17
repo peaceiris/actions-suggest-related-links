@@ -19,6 +19,7 @@ export function removeSymbols(txt: string): string {
     .replace(/;$/g, ' ')
     .replace(/\s-\s/g, ' ')
     .replace(/-$/g, ' ')
+    .replace(/(--)+/g, ' ')
     .replace(/\s\|\s/g, ' ')
     .replace(/\|$/g, ' ')
     .replace(/,\s/g, ' ')

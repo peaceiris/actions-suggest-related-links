@@ -50,6 +50,10 @@ describe('removeSymbols', () => {
         out: 'this is a pre-processing-method'
       },
       {
+        in: '| :--- | :---: | ---: |',
+        out: ''
+      },
+      {
         in: 'GitHub Actions | GitHub Help | github.com',
         out: 'GitHub Actions GitHub Help github.com'
       },
