@@ -1,6 +1,6 @@
 {
   "name": "Node.js",
-  "image": "docker.pkg.github.com/peaceiris/actions-suggest-related-links/actions-suggest-related-links-dev:latest",
+  "image": "docker.pkg.github.com/peaceiris/actions-suggest-related-links/asrl-dev:latest",
 
   // Use 'settings' to set *default* container specific settings.json values on container create.
   "settings": {

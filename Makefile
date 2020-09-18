@@ -1,4 +1,4 @@
-IMAGE_NAME := docker.pkg.github.com/peaceiris/actions-suggest-related-links/actions-suggest-related-links-dev:latest
+IMAGE_NAME := docker.pkg.github.com/peaceiris/actions-suggest-related-links/asrl-dev:latest
 NODE_VERSION := $(shell cat ./.nvmrc)
 
 .PHONY: build
