@@ -6,6 +6,15 @@ A GitHub Action to suggest related or similar issues, documents, and links. Base
 
 Sometimes, users create a new issue that is similar to already opened or closed issues. When you face the issue, you need to find similar issues or related links and post it as a comment. That process is a pain, right? This action can do it instead of you!
 
+[![license](https://img.shields.io/github/license/peaceiris/actions-suggest-related-links.svg)](https://github.com/peaceiris/actions-suggest-related-links/blob/main/LICENSE)
+[![release](https://img.shields.io/github/release/peaceiris/actions-suggest-related-links.svg)](https://github.com/peaceiris/actions-suggest-related-links/releases/latest)
+[![GitHub release date](https://img.shields.io/github/release-date/peaceiris/actions-suggest-related-links.svg)](https://github.com/peaceiris/actions-suggest-related-links/releases)
+[![Release Feed](https://img.shields.io/badge/release-feed-yellow)](https://github.com/peaceiris/actions-suggest-related-links/releases.atom)
+
+[![codecov](https://codecov.io/gh/peaceiris/actions-suggest-related-links/branch/main/graph/badge.svg)](https://codecov.io/gh/peaceiris/actions-suggest-related-links)
+[![CodeFactor](https://www.codefactor.io/repository/github/peaceiris/actions-suggest-related-links/badge)](https://www.codefactor.io/repository/github/peaceiris/actions-suggest-related-links)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4e4b302d2d367b169b85/maintainability)](https://codeclimate.com/github/peaceiris/actions-suggest-related-links/maintainability)
+
 
 
 ## Table of Contents
