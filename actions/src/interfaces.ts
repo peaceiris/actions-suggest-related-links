@@ -30,7 +30,7 @@ export interface Issues {
   fullPath: string;
 }
 
-export interface Comments extends Issues {}
+export type Comments = Issues;
 
 export interface Issue {
   html_url: string;
