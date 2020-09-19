@@ -14,6 +14,10 @@ describe('md2text', () => {
       {
         in: '<h2>this is a h2 tag</h2>',
         out: 'this is a h2 tag'
+      },
+      {
+        in: '<!-- comment line -->',
+        out: ''
       }
     ];
     for (const t of tests) {
