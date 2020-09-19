@@ -30,13 +30,7 @@ export interface Issues {
   fullPath: string;
 }
 
-export interface Comments {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  data: Array<any>;
-  fileName: string;
-  location: string;
-  fullPath: string;
-}
+export type Comments = Issues;
 
 export interface Issue {
   html_url: string;
