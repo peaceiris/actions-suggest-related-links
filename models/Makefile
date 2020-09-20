@@ -3,7 +3,7 @@ IMAGE_NAME := docker.pkg.github.com/peaceiris/actions-suggest-related-links/asrl
 .PHONY: build
 build:
 	# docker-compose build
-	docker build -t ${IMAGE_NAME}
+	docker build -t ${IMAGE_NAME} .
 
 .PHONY: run
 run:
