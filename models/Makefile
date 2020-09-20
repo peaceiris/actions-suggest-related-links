@@ -1,8 +1,8 @@
-IMAGE_NAME := peaceiris/actions-suggest-related-links-models:latest
+IMAGE_NAME := docker.pkg.github.com/peaceiris/actions-suggest-related-links/asrl-fasttext:latest
 
 .PHONY: build
 build:
-	# docker-compose build --build-arg NODE_VERSION=$(NODE_VERSION)
+	# docker-compose build
 	docker build -t ${IMAGE_NAME}
 
 .PHONY: run
