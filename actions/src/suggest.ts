@@ -27,6 +27,7 @@ export async function suggest(inps: Inputs, tmpDir: string): Promise<void> {
     ` | ` +
     `<a href="https://github.com/peaceiris/actions-suggest-related-links">Bot Usage</a>` +
     `</div>\n`;
+  commentBody += '\n<!-- peaceiris/actions-suggest-related-links -->\n';
 
   const githubAPI = new GitHubAPI(inps.GithubToken, context.repo.owner, context.repo.repo);
   await githubAPI.createComment(commentBody);
