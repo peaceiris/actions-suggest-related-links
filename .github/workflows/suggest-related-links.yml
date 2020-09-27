@@ -42,8 +42,8 @@ jobs:
       - name: fastText
         if: github.event_name == 'issues' || github.event_name == 'pull_request'
         run: |
-          git clone https://github.com/peaceiris/actions-suggest-related-links.git ~
-          cd ~/actions-suggest-related-links/models/fasttext
+          git clone https://github.com/peaceiris/actions-suggest-related-links.git ~/asrl
+          cd ~/asrl/models/fasttext
           git checkout 41db3bb
           cp ~/actions-suggest-related-links-tmp/{training-data.json,input.txt} .
           make train
