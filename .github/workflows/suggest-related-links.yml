@@ -8,11 +8,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '13 13 * * */7'
-  pull_request:
-    paths:
-      - '.github/workflows/suggest-related-links.yml'
-      - 'models/**'
-      - '!*.md'
 
 jobs:
   action:
@@ -24,7 +19,7 @@ jobs:
         run: echo "${GITHUB_CONTEXT}"
 
       - name: Setup Python
-        if: github.event_name == 'issues' || github.event_name == 'pull_request'
+        if: github.event_name == 'issues'
         uses: actions/setup-python@v2.1.2
         with:
           python-version: '3.8'
@@ -50,7 +45,6 @@ jobs:
           cp ./suggestions.json ~/actions-suggest-related-links-tmp/
 
       - uses: peaceiris/actions-suggest-related-links@v1.0.0
-        if: github.event_name != 'pull_request'
         with:
           mode: 'suggest'
           repository: 'peaceiris/actions-gh-pages'
