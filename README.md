@@ -77,29 +77,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-action-
 
-      - uses: peaceiris/actions-suggest-related-links@v1.0.0
-
-      - name: Setup model
+      - uses: peaceiris/actions-suggest-related-links@v1.1.1
+      - uses: peaceiris/actions-suggest-related-links/models/fasttext@v1.1.1
         if: github.event_name == 'issues'
-        run: |
-          cd ~
-          git clone https://github.com/peaceiris/actions-suggest-related-links.git
-          cd ./actions-suggest-related-links/models
-          git checkout v1.0.0
-          python3 -m pip install -r ./requirements.txt
-
-      - name: fastText
-        if: github.event_name == 'issues'
-        run: |
-          cd ~/actions-suggest-related-links/models/fasttext
-          cp ~/actions-suggest-related-links-tmp/training-data.json .
-          cp ~/actions-suggest-related-links-tmp/input.txt .
-          python3 train.py -d training-data.json -test input.txt
-          cp ./suggestions.json ~/actions-suggest-related-links-tmp/
-
-      - uses: peaceiris/actions-suggest-related-links@v1.0.0
+        with:
+          version: v1.1.1
+      - uses: peaceiris/actions-suggest-related-links@v1.1.1
         with:
           mode: 'suggest'
+          repository: 'peaceiris/actions-gh-pages'
+          unclickable: true
 ```
 
 ### Save Issues Data
@@ -147,8 +134,7 @@ When a new issue is created or updated, the fastText model is trained.
 In accordance with its name, fastText has the advantage of very short inference times.
 
 We think training time at the GitHub Actions runners won't be an issue.
-In the case of [GitHub Actions for GitHub Pages] repository, the training execution time is 1 sec.
-But installing time of dependencies takes 1 min, the total execution time is about 1.5 min.
+In the case of [GitHub Actions for GitHub Pages] repository, the training execution time is 1 sec and the total execution time is about 30 sec.
 
 [fastText]: https://fasttext.cc/
 [GitHub Actions for GitHub Pages]: https://github.com/peaceiris/actions-gh-pages
