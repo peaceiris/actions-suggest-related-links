@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v1.1.0...v1.1.1) (2020-09-27)
+
+
+### ci
+
+* bump version ([0fe7bf0](https://github.com/peaceiris/actions-suggest-related-links/commit/0fe7bf0c998d191bb8cc1a565ac878d387823eb8))
+* bump version ([342458c](https://github.com/peaceiris/actions-suggest-related-links/commit/342458cd351f3e01ee3c1771e68716683e756614))
+* login to GitHub Packages ([7e7ce66](https://github.com/peaceiris/actions-suggest-related-links/commit/7e7ce665d31c3e3c7bffc63ac7d8745771a80e5c))
+
+### feat
+
+* Add fasttext composite action ([8f261db](https://github.com/peaceiris/actions-suggest-related-links/commit/8f261db2262dd9e3afeefb944cee0cb390472a0e))
+
+### fix
+
+* use github.token instead of secrets.GITHUB_TOKEN ([b45c657](https://github.com/peaceiris/actions-suggest-related-links/commit/b45c6578787632d1d0c7d5192feb5503686cce02))
+
+
+
 # [1.1.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v1.0.0...v1.1.0) (2020-09-27)
 
 
