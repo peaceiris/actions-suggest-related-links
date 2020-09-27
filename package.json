@@ -32,7 +32,7 @@
       "prettier --check",
       "eslint"
     ],
-    "README.md": [
+    "/README.md": [
       "npx doctoc@1.4.0 --github"
     ]
   },
