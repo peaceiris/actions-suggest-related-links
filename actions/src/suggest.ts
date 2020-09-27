@@ -10,7 +10,7 @@ export async function suggest(inps: Inputs, tmpDir: string): Promise<void> {
   let commentBody = '';
   commentBody += 'Related links:\n';
   if (inps.Unclickable) {
-    commentBody += '```\n';
+    commentBody += '\n```\n';
   }
   for (let i = 0; i < topNcount; i++) {
     commentBody +=
@@ -18,7 +18,7 @@ export async function suggest(inps: Inputs, tmpDir: string): Promise<void> {
       `[${results[i].title}](${results[i].html_url})\n`;
   }
   if (inps.Unclickable) {
-    commentBody += '```\n';
+    commentBody += '```\n\n(Unclickable mode)\n';
   }
   const logURL = `${process.env['GITHUB_SERVER_URL']}/${process.env['GITHUB_REPOSITORY']}/actions/runs/${process.env['GITHUB_RUN_ID']}`;
   commentBody +=
