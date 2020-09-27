@@ -40,7 +40,7 @@ jobs:
       - uses: peaceiris/actions-suggest-related-links@v1.0.0
 
       - name: fastText
-        if: github.event_name == 'issues' || github.event_name == 'pull_request'
+        if: github.event_name == 'issues'
         run: |
           git clone https://github.com/peaceiris/actions-suggest-related-links.git ~/asrl
           cd ~/asrl/models/fasttext
