@@ -1,4 +1,4 @@
-IMAGE_NAME := docker.pkg.github.com/peaceiris/actions-suggest-related-links/asrl-fasttext:latest
+IMAGE_NAME := docker.pkg.github.com/peaceiris/actions-suggest-related-links/asrl-doc2vec:latest
 
 .PHONY: build
 build:
