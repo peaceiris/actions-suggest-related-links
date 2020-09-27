@@ -81,7 +81,9 @@ export async function run(): Promise<void> {
           if (body === '') {
             return 'context body is empty';
           } else {
-            return removeSymbols(md2text(body));
+            const plainBody = removeSymbols(md2text(body));
+            console.log(plainBody);
+            return plainBody;
           }
         })();
         core.info(`[INFO] save input.txt`);
