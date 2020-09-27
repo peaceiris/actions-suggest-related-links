@@ -14,6 +14,8 @@ import {suggest} from './suggest';
 
 export async function run(): Promise<void> {
   try {
+    core.info('[INFO] Usage https://github.com/peaceiris/actions-suggest-related-links#readme');
+
     const inps: Inputs = getInputs();
     core.startGroup('Dump inputs');
     showInputs(inps);
