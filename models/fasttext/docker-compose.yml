@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  dev:
+    build: .
+    image: docker.pkg.github.com/peaceiris/actions-suggest-related-links/asrl-fasttext:latest
+    container_name: asrl_fasttext
+    volumes:
+      - ${PWD}:/src
+    stdin_open: true
+    tty: true
+    command:
+      - bash
