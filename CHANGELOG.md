@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.1.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v1.0.0...v1.1.0) (2020-09-27)
+
+
+### chore
+
+* change docker image name [skip ci] ([215073a](https://github.com/peaceiris/actions-suggest-related-links/commit/215073a25ba3b4bdc217439fec24607f2b211e46))
+
+### ci
+
+* add codecov/codecov-action (#10) ([2c23cca](https://github.com/peaceiris/actions-suggest-related-links/commit/2c23cca4067ca21e59652b51931fc9650424e1d2)), closes [#10](https://github.com/peaceiris/actions-suggest-related-links/issues/10)
+* add github/codeql-action (#9) ([10f2127](https://github.com/peaceiris/actions-suggest-related-links/commit/10f2127affe84aafec10eac074edec554e720203)), closes [#9](https://github.com/peaceiris/actions-suggest-related-links/issues/9)
+* Add Licensed ([abfbaf4](https://github.com/peaceiris/actions-suggest-related-links/commit/abfbaf40a2dfc28fe55038291c3010eea793844d))
+* add model-ci.yml (#15) ([138fc11](https://github.com/peaceiris/actions-suggest-related-links/commit/138fc11e4b4fb5d9e315370b6db93cf2899eb28d)), closes [#15](https://github.com/peaceiris/actions-suggest-related-links/issues/15)
+* add paths-ignore ([5ef2d0f](https://github.com/peaceiris/actions-suggest-related-links/commit/5ef2d0f4bdd6fbf521540448f25455f6be82a454))
+* add skipci job [skip ci] ([cdb9602](https://github.com/peaceiris/actions-suggest-related-links/commit/cdb9602a166d956410e2735a5bbb54d6b91c1fd0))
+* Pin to v1.0.0 ([16c71f7](https://github.com/peaceiris/actions-suggest-related-links/commit/16c71f74e4b3328c2e7cdabf260e39a53ee3024b))
+* remove skipci job ([41db3bb](https://github.com/peaceiris/actions-suggest-related-links/commit/41db3bb26a0acf46199176c05d0c1b9e5116f70f))
+* set unclickable to false [skip ci] ([ffcb2c4](https://github.com/peaceiris/actions-suggest-related-links/commit/ffcb2c4a652869d23caf92b5ad824814e08298b3))
+* set unclickable to true [skip ci] ([e119cb5](https://github.com/peaceiris/actions-suggest-related-links/commit/e119cb5ff0cec36938cd860e031a7c31fa9cf54d))
+* uncomment docker-compose push (#13) ([c204969](https://github.com/peaceiris/actions-suggest-related-links/commit/c204969d6376c7b481f60eeccb43f656f0987e88)), closes [#13](https://github.com/peaceiris/actions-suggest-related-links/issues/13)
+
+### deps
+
+* bump @actions/artifact from 0.3.5 to 0.4.0 (#7) ([30e128b](https://github.com/peaceiris/actions-suggest-related-links/commit/30e128b89610f077491243d8d42ad4c6157a0fca)), closes [#7](https://github.com/peaceiris/actions-suggest-related-links/issues/7)
+* bump @actions/core from 1.2.5 to 1.2.6 (#22) ([3017beb](https://github.com/peaceiris/actions-suggest-related-links/commit/3017beb98c7a09765f9f99592c394206d0a1de33)), closes [#22](https://github.com/peaceiris/actions-suggest-related-links/issues/22)
+* bump @typescript-eslint/eslint-plugin from 4.1.1 to 4.2.0 (#21) ([6325bdc](https://github.com/peaceiris/actions-suggest-related-links/commit/6325bdc09359e8156c3c604886ae46a3e333d696)), closes [#21](https://github.com/peaceiris/actions-suggest-related-links/issues/21)
+* bump @typescript-eslint/parser from 4.1.1 to 4.2.0 (#20) ([5f1d672](https://github.com/peaceiris/actions-suggest-related-links/commit/5f1d67218362172fb83dff7ce88e61f240a38def)), closes [#20](https://github.com/peaceiris/actions-suggest-related-links/issues/20)
+* bump eslint-plugin-jest from 24.0.1 to 24.0.2 (#16) ([51864dd](https://github.com/peaceiris/actions-suggest-related-links/commit/51864dd81d91caf73ba48d7aa84a198c5d0f5f7e)), closes [#16](https://github.com/peaceiris/actions-suggest-related-links/issues/16)
+* bump node from 12.18.3 to 12.18.4 (#3) ([c1ed61f](https://github.com/peaceiris/actions-suggest-related-links/commit/c1ed61fb10403b86be2631a65972efa169215aae)), closes [#3](https://github.com/peaceiris/actions-suggest-related-links/issues/3)
+* bump node-fetch from 2.6.0 to 2.6.1 (#19) ([bc63c6c](https://github.com/peaceiris/actions-suggest-related-links/commit/bc63c6c200e6ab105a4e9624053e9e598d85eb81)), closes [#19](https://github.com/peaceiris/actions-suggest-related-links/issues/19)
+* bump ts-jest from 26.3.0 to 26.4.0 (#17) ([6dcc9c3](https://github.com/peaceiris/actions-suggest-related-links/commit/6dcc9c366fbffa44965c814195c09ebe1804ed3e)), closes [#17](https://github.com/peaceiris/actions-suggest-related-links/issues/17)
+* bump typescript from 4.0.2 to 4.0.3 (#8) ([a1bc938](https://github.com/peaceiris/actions-suggest-related-links/commit/a1bc93812708349a5f9f874579a02913249d998e)), closes [#8](https://github.com/peaceiris/actions-suggest-related-links/issues/8)
+
+### docs
+
+* add badges ([e4ae0e3](https://github.com/peaceiris/actions-suggest-related-links/commit/e4ae0e3b3b93e19daa542821e66b22d82f5993e6))
+* add CONTRIBUTING.md (#14) ([52fe33e](https://github.com/peaceiris/actions-suggest-related-links/commit/52fe33e40f59018135c1415196f22ef55fdcb8c6)), closes [#14](https://github.com/peaceiris/actions-suggest-related-links/issues/14)
+* add description ([27ed21e](https://github.com/peaceiris/actions-suggest-related-links/commit/27ed21e8a141f16b2d04fc18b6356e93736d7e9f))
+* update ([17d9285](https://github.com/peaceiris/actions-suggest-related-links/commit/17d9285f0a9d475664c601f503687a2855440c21))
+* update ([d23c9a3](https://github.com/peaceiris/actions-suggest-related-links/commit/d23c9a30c7d231d43c154322a37af70fa81d745c))
+* update ([d4acc49](https://github.com/peaceiris/actions-suggest-related-links/commit/d4acc49ed5f8d0addddcaecf45d5dcc5ea59ed8e))
+* update ([e79e66d](https://github.com/peaceiris/actions-suggest-related-links/commit/e79e66da208d6ecf19b8cc7ee8ac5237270d8d28))
+* update ([5234a7b](https://github.com/peaceiris/actions-suggest-related-links/commit/5234a7b9d1c117d3cd341554f1a4263b652998b6))
+* update Save Issues Data ([1dcce0f](https://github.com/peaceiris/actions-suggest-related-links/commit/1dcce0fd2099be781a03d188ff2b6dd6d1627a0a))
+* update ToC ([e5972a1](https://github.com/peaceiris/actions-suggest-related-links/commit/e5972a1647ddcfddf33f78afabfadb253b5330bb))
+
+### feat
+
+* Add link to README ([b461746](https://github.com/peaceiris/actions-suggest-related-links/commit/b4617466c1c3ffb2ef508579dc3bacc9e78b5e7d))
+* print plainBody to log ([62174ea](https://github.com/peaceiris/actions-suggest-related-links/commit/62174ea2fc3ad44883f9e6d12b571cba90549a4f))
+* Pull and use fasttext Docker image (#23) ([2cdad50](https://github.com/peaceiris/actions-suggest-related-links/commit/2cdad50c40f6f2f02556a4250ed168cc1bf41338)), closes [#23](https://github.com/peaceiris/actions-suggest-related-links/issues/23)
+
+### refactor
+
+* Add suggestion identifier (#18) ([bc954c0](https://github.com/peaceiris/actions-suggest-related-links/commit/bc954c0df1804941bf9eb68b087a8a1a9b052d63)), closes [#18](https://github.com/peaceiris/actions-suggest-related-links/issues/18) [#4](https://github.com/peaceiris/actions-suggest-related-links/issues/4)
+* Comments equals to Issues (#11) ([2b908bf](https://github.com/peaceiris/actions-suggest-related-links/commit/2b908bf46d09af6d81fac05d76042e627d830d0f)), closes [#11](https://github.com/peaceiris/actions-suggest-related-links/issues/11)
+* enhance suggestion format (#12) ([bbb9f14](https://github.com/peaceiris/actions-suggest-related-links/commit/bbb9f14abddea5b8dee5c00320a1c40dc606a46a)), closes [#12](https://github.com/peaceiris/actions-suggest-related-links/issues/12)
+
+### test
+
+* comment lines should be removed (#5) ([f209a5f](https://github.com/peaceiris/actions-suggest-related-links/commit/f209a5f0d6c04bfbbfa47196b4187bb7dff61e03)), closes [#5](https://github.com/peaceiris/actions-suggest-related-links/issues/5)
+
+
+
 # [1.0.0](https://github.com/peaceiris/actions-suggest-related-links/compare/v0.11.0...v1.0.0) (2020-09-17)
 
 
