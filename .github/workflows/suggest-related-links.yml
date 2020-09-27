@@ -33,18 +33,10 @@ jobs:
             ${{ runner.os }}-action-
 
       - uses: peaceiris/actions-suggest-related-links@v1.1.0
-
-      - name: fastText
+      - uses: peaceiris/actions-suggest-related-links/models/fasttext@main
         if: github.event_name == 'issues'
-        run: |
-          git clone https://github.com/peaceiris/actions-suggest-related-links.git ~/asrl
-          cd ~/asrl/models/fasttext
-          git checkout v1.1.0
-          cp ~/actions-suggest-related-links-tmp/{training-data.json,input.txt} .
-          echo '${{ secrets.GITHUB_TOKEN }}' | docker login 'docker.pkg.github.com' -u '${{ github.repository_owner }}' --password-stdin
-          make train
-          cp ./suggestions.json ~/actions-suggest-related-links-tmp/
-
+        with:
+          version: v1.1.0
       - uses: peaceiris/actions-suggest-related-links@v1.1.0
         with:
           mode: 'suggest'

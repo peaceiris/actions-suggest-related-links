@@ -1,0 +1,19 @@
+name: 'Run fastText'
+description: 'Run fastText with peaceiris/actions-suggest-related-links'
+inputs:
+  version:
+    description: 'A version of peaceiris/actions-suggest-related-links'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Run fastText
+      run: |
+        git clone https://github.com/peaceiris/actions-suggest-related-links.git ~/asrl
+        cd ~/asrl/models/fasttext
+        git checkout ${{ inputs.version }}
+        cp ~/actions-suggest-related-links-tmp/{training-data.json,input.txt} .
+        echo '${{ secrets.GITHUB_TOKEN }}' | docker login 'docker.pkg.github.com' -u '${{ github.repository_owner }}' --password-stdin
+        make train
+        cp ./suggestions.json ~/actions-suggest-related-links-tmp/
+      shell: bash
