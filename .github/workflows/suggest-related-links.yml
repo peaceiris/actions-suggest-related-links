@@ -39,22 +39,14 @@ jobs:
 
       - uses: peaceiris/actions-suggest-related-links@v1.0.0
 
-      - name: Setup model
+      - name: fastText
         if: github.event_name == 'issues' || github.event_name == 'pull_request'
         run: |
-          cd ~
-          git clone https://github.com/peaceiris/actions-suggest-related-links.git
-          cd ./actions-suggest-related-links/models
-          git checkout v1.0.0
-          python3 -m pip install -r ./requirements.txt
-
-      - name: fastText
-        if: github.event_name == 'issues'
-        run: |
+          git clone https://github.com/peaceiris/actions-suggest-related-links.git ~
           cd ~/actions-suggest-related-links/models/fasttext
-          cp ~/actions-suggest-related-links-tmp/training-data.json .
-          cp ~/actions-suggest-related-links-tmp/input.txt .
-          python3 train.py -d training-data.json -test input.txt
+          git checkout 41db3bb
+          cp ~/actions-suggest-related-links-tmp/{training-data.json,input.txt} .
+          make train
           cp ./suggestions.json ~/actions-suggest-related-links-tmp/
 
       - uses: peaceiris/actions-suggest-related-links@v1.0.0
