@@ -39,7 +39,7 @@ jobs:
         run: |
           git clone https://github.com/peaceiris/actions-suggest-related-links.git ~/asrl
           cd ~/asrl/models/fasttext
-          git checkout 41db3bb
+          git checkout v1.1.0
           cp ~/actions-suggest-related-links-tmp/{training-data.json,input.txt} .
           make train
           cp ./suggestions.json ~/actions-suggest-related-links-tmp/
