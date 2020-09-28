@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2.3.2
-      - uses: peaceiris/workflows/setup-hub@v0.2.0
-      - uses: peaceiris/workflows/create-release-npm@v0.3.0
+      - uses: peaceiris/workflows/setup-hub@v0.4.0
+      - uses: peaceiris/workflows/create-release-npm@v0.4.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
