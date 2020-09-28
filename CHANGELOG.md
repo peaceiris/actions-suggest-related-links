@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.2](https://github.com/peaceiris/actions-suggest-related-links/compare/v1.1.1...v1.1.2) (2020-09-28)
+
+
+### ci
+
+* enable --draft ([3b9a6dc](https://github.com/peaceiris/actions-suggest-related-links/commit/3b9a6dc534e012d47a1f722f4420745da28750bd))
+* pin version to v1.1.1 ([c51f900](https://github.com/peaceiris/actions-suggest-related-links/commit/c51f900dcff3793252980512873d34eb1999ef88))
+* remove actions/setup-python ([1fc1956](https://github.com/peaceiris/actions-suggest-related-links/commit/1fc1956fc665d29131c48eebdbff4d1571418ed8))
+* use peaceiris/workflows/create-release-npm ([86f9c75](https://github.com/peaceiris/actions-suggest-related-links/commit/86f9c751cc12cc3747fddd5373d66a2878e60767))
+* use peaceiris/workflows/setup-hub ([c9b2352](https://github.com/peaceiris/actions-suggest-related-links/commit/c9b2352b8adea8f8976ce53ca69fe863a4a2d2cd))
+
+### deps
+
+* bump eslint from 7.9.0 to 7.10.0 (#25) ([1952940](https://github.com/peaceiris/actions-suggest-related-links/commit/195294021dc91989a25fb50809a86ae50d6b3e3c)), closes [#25](https://github.com/peaceiris/actions-suggest-related-links/issues/25)
+* bump eslint-config-prettier from 6.11.0 to 6.12.0 (#26) ([85bccb9](https://github.com/peaceiris/actions-suggest-related-links/commit/85bccb94ee41d9a5b619672b533db8606e94cb0d)), closes [#26](https://github.com/peaceiris/actions-suggest-related-links/issues/26)
+
+### feat
+
+* Add mode type to suggestion message ([e595054](https://github.com/peaceiris/actions-suggest-related-links/commit/e59505499251173a1d6ff10b1f45d7c4ea2266ba))
+
+
+
 ## [1.1.1](https://github.com/peaceiris/actions-suggest-related-links/compare/v1.1.0...v1.1.1) (2020-09-27)
 
 
