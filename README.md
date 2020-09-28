@@ -63,12 +63,6 @@ jobs:
   action:
     runs-on: ubuntu-18.04
     steps:
-      - name: Setup Python
-        if: github.event_name == 'issues'
-        uses: actions/setup-python@v2.1.2
-        with:
-          python-version: '3.8'
-
       - name: Cache dependencies
         uses: actions/cache@v2
         with:

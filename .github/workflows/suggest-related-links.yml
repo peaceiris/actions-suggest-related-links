@@ -18,12 +18,6 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "${GITHUB_CONTEXT}"
 
-      - name: Setup Python
-        if: github.event_name == 'issues'
-        uses: actions/setup-python@v2.1.2
-        with:
-          python-version: '3.8'
-
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
