@@ -26,12 +26,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-action-
 
-      - uses: peaceiris/actions-suggest-related-links@v1.1.1
-      - uses: peaceiris/actions-suggest-related-links/models/fasttext@v1.1.1
+      - uses: peaceiris/actions-suggest-related-links@v1.1.2
+      - uses: peaceiris/actions-suggest-related-links/models/fasttext@v1.1.2
         if: github.event_name == 'issues'
         with:
           version: v1.1.1
-      - uses: peaceiris/actions-suggest-related-links@v1.1.1
+      - uses: peaceiris/actions-suggest-related-links@v1.1.2
         with:
           mode: 'suggest'
           repository: 'peaceiris/actions-gh-pages'
