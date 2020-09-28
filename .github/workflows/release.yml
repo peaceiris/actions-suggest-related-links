@@ -18,16 +18,6 @@ jobs:
 
       - uses: peaceiris/workflows/setup-hub@v0.2.0
 
-      - name: Create release
+      - uses: peaceiris/workflows/create-release-npm@v0.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TAG_NAME="${GITHUB_REF##refs/tags/}"
-          echo "See [CHANGELOG.md](https://github.com/${GITHUB_REPOSITORY}/blob/${TAG_NAME}/CHANGELOG.md) for more details." > ./release_notes.md
-          RELEASE_NAME="$(jq -r '.name' ./package.json)"
-          sed -i "1i${RELEASE_NAME} ${TAG_NAME}\n" ./release_notes.md
-          ./bin/hub release create \
-            --draft \
-            --prerelease \
-            --file ./release_notes.md \
-            "${TAG_NAME}"
