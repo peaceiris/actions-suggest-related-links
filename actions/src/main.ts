@@ -1,8 +1,6 @@
 import {context} from '@actions/github';
 import * as core from '@actions/core';
 import * as io from '@actions/io';
-// import * as exec from '@actions/exec';
-// import * as github from '@actions/github';
 import {Inputs, Repository, Issue} from './interfaces';
 import {showInputs, getInputs} from './get-inputs';
 import {fetchIssues} from './fetch-issues';
