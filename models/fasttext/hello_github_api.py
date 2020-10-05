@@ -23,7 +23,7 @@ for issue in repo.get_issues():
     for comment in issue.get_comments():
         print(comment.body)
 
-#print(repo.get_issue(number=7).body)
+# print(repo.get_issue(number=7).body)
 
 # For project
 """
