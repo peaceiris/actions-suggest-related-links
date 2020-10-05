@@ -1,4 +1,4 @@
-import {md2text, removeSymbols} from '../src/preprocess';
+import {md2text} from '../src/preprocess';
 
 describe('md2text', () => {
   const tests = [
