@@ -1,9 +1,10 @@
-import re
-from github import Github
-from bs4 import BeautifulSoup
-import markdown
-import subprocess
 import base64
+import re
+import subprocess
+
+import markdown
+from bs4 import BeautifulSoup
+from github import Github
 
 with open(".ACCESS_TOKEN", "r") as f:
     token = f.readline()
