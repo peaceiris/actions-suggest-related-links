@@ -1,7 +1,7 @@
 beautifulsoup4==4.9.3
 boto==2.49.0
 boto3==1.14.55
-botocore==1.17.55
+botocore==1.18.11
 bs4==0.0.1
 certifi==2020.6.20
 chardet==3.0.4
