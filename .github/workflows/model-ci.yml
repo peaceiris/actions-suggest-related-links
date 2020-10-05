@@ -9,14 +9,26 @@ on:
     paths:
       - '.github/workflows/model-ci.yml'
       - 'models/**'
-      - '!*.md'
+      - '!**.md'
   pull_request:
     paths:
       - '.github/workflows/model-ci.yml'
       - 'models/**'
-      - '!*.md'
+      - '!**.md'
 
 jobs:
+  python:
+    runs-on: ubuntu-18.04
+    defaults:
+      run:
+        working-directory: models
+    steps:
+      - uses: actions/checkout@v2.3.2
+      - run: make build
+      - run: make cifmt
+      - run: make ciisort
+      - run: make lint
+
   fasttext:
     runs-on: ubuntu-18.04
     defaults:
