@@ -1,8 +1,6 @@
 import base64
-import re
 import subprocess
 
-import markdown
 from bs4 import BeautifulSoup
 from github import Github
 

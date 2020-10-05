@@ -1,7 +1,5 @@
 import argparse
 import json
-import re
-import gensim
 from gensim import models
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
