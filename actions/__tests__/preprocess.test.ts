@@ -1,129 +1,142 @@
-import {md2text, removeSymbols} from '../src/preprocess';
+import {md2text} from '../src/preprocess';
 
 describe('md2text', () => {
-  test('convert markdown to plain text', () => {
-    const tests = [
-      {
-        in: '## This is a h2 tag',
-        out: 'This is a h2 tag'
-      },
-      {
-        in: 'this is a inline `code`.',
-        out: 'this is a inline code.'
-      },
-      {
-        in: '<h2>this is a h2 tag</h2>',
-        out: 'this is a h2 tag'
-      },
-      {
-        in: '<!-- comment line -->',
-        out: ''
-      }
-    ];
-    for (const t of tests) {
-      expect(md2text(t.in)).toMatch(t.out);
+  const tests = [
+    {
+      name: 'heading',
+      in: '## This is a h2 tag',
+      out: 'This is a h2 tag'
+    },
+    {
+      name: 'inline code',
+      in: 'this is a inline `code`.',
+      out: 'this is a inline code'
+    },
+    {
+      name: 'HTML heading',
+      in: '<h2>this is a h2 tag</h2>',
+      out: 'this is a h2 tag'
+    },
+    {
+      name: 'HTML tag',
+      in: '<head> <body>',
+      out: 'head body'
+    },
+    {
+      name: 'HTML comment',
+      in: '<!-- comment line -->',
+      out: ''
+    },
+    {
+      name: 'double quotation',
+      in: 'this is a "double quotation"',
+      out: 'this is a double quotation'
+    },
+    {
+      name: 'single quotation',
+      in: "'github' 'actions'",
+      out: 'github actions'
+    },
+    {
+      name: 'colon',
+      in: 'this: is: a colon',
+      out: 'this is a colon'
+    },
+    {
+      name: 'colon operator',
+      in: 'this is a colon:operator::double',
+      out: 'this is a colon:operator::double'
+    },
+    {
+      name: 'semicolon',
+      in: 'this; is; a semicolon',
+      out: 'this is a semicolon'
+    },
+    {
+      name: 'hyphen',
+      in: 'this is - a - hyphen',
+      out: 'this is a hyphen'
+    },
+    {
+      name: 'hyphenation',
+      in: 'this is a pre-processing-method',
+      out: 'this is a pre-processing-method'
+    },
+    {
+      name: 'table',
+      in: '| a | b | c | | :--- | :---: | ---: | | d | e | f |',
+      out: 'a b c d e f'
+    },
+    {
+      name: 'pipe',
+      in: 'GitHub Actions | GitHub Help | github.com',
+      out: 'GitHub Actions GitHub Help github.com'
+    },
+    {
+      name: 'comma',
+      in: 'A, B, and C',
+      out: 'A B and C'
+    },
+    {
+      name: 'period',
+      in: 'A. B. C.',
+      out: 'A B C'
+    },
+    {
+      name: 'round brackets of function',
+      in: 'str.replace(); str.split()',
+      out: 'str.replace str.split'
+    },
+    {
+      name: 'round brackets',
+      in: 'hello (github) actions, (hello)',
+      out: 'hello github actions hello'
+    },
+    {
+      name: 'task list (checkbox)',
+      in: '- [x] todo',
+      out: 'todo'
+    },
+    {
+      name: 'GitHub Actions workflow syntax',
+      in: '${{ github.sha }}',
+      out: 'github.sha'
+    },
+    {
+      name: 'shell syntax',
+      in: '${GITHUB_SHA}',
+      out: 'GITHUB_SHA'
+    },
+    {
+      name: 'AND OR',
+      in: '(a && b) || (c && d)',
+      out: 'a b c d'
+    },
+    {
+      name: 'ternary operator',
+      in: 'c = a == b ? 1 : 0',
+      out: 'c a b 1 0'
+    },
+    {
+      name: 'commit message',
+      in: 'ci: change workflow name [skip ci]',
+      out: 'ci change workflow name skip ci'
+    },
+    {
+      name: 'URL',
+      in: 'docker.pkg.github.com/ github.repository /action:latest',
+      out: 'docker.pkg.github.com github.repository action:latest'
+    },
+    {
+      name: 'backquote',
+      in: `\`github\` \`actions\``,
+      out: 'github actions'
     }
-  });
-});
+  ];
 
-describe('removeSymbols', () => {
-  test('remove symbols', () => {
-    const tests = [
-      {
-        in: 'this is a "double quotation"',
-        out: 'this is a double quotation'
-      },
-      {
-        in: 'this: is: a colon',
-        out: 'this is a colon'
-      },
-      {
-        in: 'this is a colon:operator::double',
-        out: 'this is a colon:operator::double'
-      },
-      {
-        in: 'this; is; a semicolon',
-        out: 'this is a semicolon'
-      },
-      {
-        in: 'this is - a - hyphen',
-        out: 'this is a hyphen'
-      },
-      {
-        in: 'this is a pre-processing-method',
-        out: 'this is a pre-processing-method'
-      },
-      {
-        in: '| a | b | c | | :--- | :---: | ---: | | d | e | f |',
-        out: 'a b c d e f'
-      },
-      {
-        in: 'GitHub Actions | GitHub Help | github.com',
-        out: 'GitHub Actions GitHub Help github.com'
-      },
-      {
-        in: 'A, B, and C',
-        out: 'A B and C'
-      },
-      {
-        in: 'A. B. C.',
-        out: 'A B C'
-      },
-      {
-        in: 'first sentence. second sentence. third sentence',
-        out: 'first sentence second sentence third sentence'
-      },
-      {
-        in: 'str.replace(); str.split()',
-        out: 'str.replace str.split'
-      },
-      {
-        in: 'hello (github) actions, (hello)',
-        out: 'hello github actions hello'
-      },
-      {
-        in: '- [x] todo',
-        out: 'todo'
-      },
-      {
-        in: '${{ github.sha }}',
-        out: 'github.sha'
-      },
-      {
-        in: '${GITHUB_SHA}',
-        out: 'GITHUB_SHA'
-      },
-      {
-        in: '<head> <body>',
-        out: 'head body'
-      },
-      {
-        in: '(a && b) & (c && d)',
-        out: 'a b & c d'
-      },
-      {
-        in: 'c = a == b ? 1 : 0',
-        out: 'c a b 1 0'
-      },
-      {
-        in: '[skip ci] [skip cd]',
-        out: 'skip ci skip cd'
-      },
-      {
-        in: 'docker.pkg.github.com/ github.repository /action:latest',
-        out: 'docker.pkg.github.com github.repository action:latest'
-      },
-      {
-        in: "'github' 'actions'",
-        out: 'github actions'
-      },
-      {
-        in: `\`github\` \`actions\``,
-        out: 'github actions'
-      }
-    ];
-    for (const t of tests) {
-      expect(removeSymbols(t.in)).toMatch(t.out);
-    }
-  });
+  for (const t of tests) {
+    test(`convert markdown to plain text: ${t.name}`, () => {
+      expect(md2text(t.in)).toMatch(t.out);
+    });
+  }
 });

@@ -7,7 +7,8 @@ const toString = require('mdast-util-to-string');
 export function md2text(md: string): string {
   const tree = unified().use(parse).parse(md.replace(/\r?\n/g, ' 45cnwy5ugwyeiurgywuer '));
   const text = toString(tree);
-  return text.replace(/45cnwy5ugwyeiurgywuer/g, ' ').replace(/\s+/g, ' ');
+  const trimmedText = text.replace(/45cnwy5ugwyeiurgywuer/g, ' ').replace(/\s+/g, ' ');
+  return removeSymbols(trimmedText);
 }
 
 export function removeSymbols(txt: string): string {

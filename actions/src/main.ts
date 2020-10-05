@@ -7,7 +7,7 @@ import {fetchIssues} from './fetch-issues';
 import path from 'path';
 import fs from 'fs';
 import * as artifact from '@actions/artifact';
-import {md2text, removeSymbols} from './preprocess';
+import {md2text} from './preprocess';
 import {suggest} from './suggest';
 
 export async function run(): Promise<void> {
@@ -47,7 +47,7 @@ export async function run(): Promise<void> {
           html_url: data.html_url,
           number: data.number,
           title: data.title,
-          body: removeSymbols(md2text(data.body))
+          body: md2text(data.body)
         };
         trainingData.push(issue);
       });
@@ -79,7 +79,7 @@ export async function run(): Promise<void> {
           if (body === '') {
             return 'context body is empty';
           } else {
-            const plainBody = removeSymbols(md2text(body));
+            const plainBody = md2text(body);
             console.log(plainBody);
             return plainBody;
           }
