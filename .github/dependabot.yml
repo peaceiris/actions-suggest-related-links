@@ -35,14 +35,3 @@ updates:
   - dependencies
   commit-message:
     prefix: deps
-
-- package-ecosystem: pip
-  directory: "models/fasttext"
-  schedule:
-    interval: daily
-    time: '11:00'
-    timezone: Japan
-  labels:
-  - dependencies
-  commit-message:
-    prefix: deps
