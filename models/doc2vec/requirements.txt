@@ -12,7 +12,7 @@ gensim==3.8.3
 idna==2.10
 jmespath==0.10.0
 Markdown==3.3
-numpy==1.19.1
+numpy==1.19.2
 pybind11==2.5.0
 PyGithub==1.53
 PyJWT==1.7.1
