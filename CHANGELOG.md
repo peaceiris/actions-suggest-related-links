@@ -2,6 +2,69 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.3](https://github.com/peaceiris/actions-suggest-related-links/compare/v1.1.2...v1.1.3) (2020-10-14)
+
+
+### ci
+
+* add models/fasttext ([a58fe41](https://github.com/peaceiris/actions-suggest-related-links/commit/a58fe41a15be4274b04195e5024c87fd9b678e52))
+* allow dependency-type production ([7dd6b39](https://github.com/peaceiris/actions-suggest-related-links/commit/7dd6b39255564bf1edbb93c0358529fd66e2164b))
+* bump actions/setup-node from v2.1.1 to v2.1.2 (#34) ([5c2db47](https://github.com/peaceiris/actions-suggest-related-links/commit/5c2db47992e929275bdcc82d0cce477974a40a05)), closes [#34](https://github.com/peaceiris/actions-suggest-related-links/issues/34)
+* bump peaceiris/actions-suggest-related-links from v1.1.1 to v1.1.2 (#28) ([28bc774](https://github.com/peaceiris/actions-suggest-related-links/commit/28bc77484d8bc11ff15f36ec148da08f4817c2a0)), closes [#28](https://github.com/peaceiris/actions-suggest-related-links/issues/28)
+* bump peaceiris/workflows from v0.4.0 to v0.5.0 (#66) ([3e09101](https://github.com/peaceiris/actions-suggest-related-links/commit/3e09101c91fdb3df8cc8a9b983b8d2fbe0aba1a4)), closes [#66](https://github.com/peaceiris/actions-suggest-related-links/issues/66)
+* delete peaceiris/workflows/setup-hub ([a23f765](https://github.com/peaceiris/actions-suggest-related-links/commit/a23f76575b126295dbb398912ba936294d7cd3dd))
+* fix paths-ignore ([b715b12](https://github.com/peaceiris/actions-suggest-related-links/commit/b715b12bd82c640a51571c6da29ea2ea3c953a6d))
+* fix paths-ignore ([cd91b8d](https://github.com/peaceiris/actions-suggest-related-links/commit/cd91b8da90260cb97e6a4633691780b95bf4bad2))
+* Python CI (#36) ([1ddce4f](https://github.com/peaceiris/actions-suggest-related-links/commit/1ddce4f3befb1b4637bff085b6bf0fb216b1806d)), closes [#36](https://github.com/peaceiris/actions-suggest-related-links/issues/36)
+* remove context dump step ([2a158b6](https://github.com/peaceiris/actions-suggest-related-links/commit/2a158b6a0d75b299ae2717dd56a8eb42dd006ec2))
+* remove duplication ([8949a3e](https://github.com/peaceiris/actions-suggest-related-links/commit/8949a3e47945507a304034136a372b7c6cb93aca))
+* Revert "ci: use peaceiris/workflows/update-major-tag" ([42b0bcb](https://github.com/peaceiris/actions-suggest-related-links/commit/42b0bcbf6c19ea0eee9d9cb2ae1a22bfc81678f2))
+* update peaceiris/workflows requirement to v0.4.0 (#29) ([d3893c6](https://github.com/peaceiris/actions-suggest-related-links/commit/d3893c613d7778be3b109fc9426d18b79fdba089)), closes [#29](https://github.com/peaceiris/actions-suggest-related-links/issues/29)
+* use peaceiris/workflows/update-major-tag ([3bccab5](https://github.com/peaceiris/actions-suggest-related-links/commit/3bccab564c2b685e3c7307714e62bef0cb913ae1))
+
+### deps
+
+* bump @types/node from 12.12.62 to 12.12.63 (#48) ([b80b04e](https://github.com/peaceiris/actions-suggest-related-links/commit/b80b04e217ed62ac4fe11452b2e93514b41d7ada)), closes [#48](https://github.com/peaceiris/actions-suggest-related-links/issues/48)
+* bump @types/node from 12.12.63 to 12.12.64 (#55) ([64b4d77](https://github.com/peaceiris/actions-suggest-related-links/commit/64b4d777454abc083be4ac8d9fa9e133abb07503)), closes [#55](https://github.com/peaceiris/actions-suggest-related-links/issues/55)
+* bump @types/node from 12.12.64 to 12.12.66 (#60) ([8c0e18a](https://github.com/peaceiris/actions-suggest-related-links/commit/8c0e18ad8f6944da39857a5dcacec7b3378d73c9)), closes [#60](https://github.com/peaceiris/actions-suggest-related-links/issues/60)
+* bump @types/node from 12.12.66 to 12.12.67 (#63) ([6719d63](https://github.com/peaceiris/actions-suggest-related-links/commit/6719d6345396e54e01f125bcd02531d46aa8ca58)), closes [#63](https://github.com/peaceiris/actions-suggest-related-links/issues/63)
+* bump @typescript-eslint/eslint-plugin from 4.2.0 to 4.3.0 (#30) ([6280690](https://github.com/peaceiris/actions-suggest-related-links/commit/62806909bfcdcc9a1b9e9b4b4f67e1bcd6de1c68)), closes [#30](https://github.com/peaceiris/actions-suggest-related-links/issues/30)
+* bump @typescript-eslint/eslint-plugin from 4.3.0 to 4.4.0 (#54) ([88a46f3](https://github.com/peaceiris/actions-suggest-related-links/commit/88a46f31a6d24ee8ed6cbdb354275d16294187df)), closes [#54](https://github.com/peaceiris/actions-suggest-related-links/issues/54)
+* bump @typescript-eslint/parser from 4.2.0 to 4.3.0 (#31) ([1f85ced](https://github.com/peaceiris/actions-suggest-related-links/commit/1f85cedb30db5c02f0402c51fd4feba84b3a2c54)), closes [#31](https://github.com/peaceiris/actions-suggest-related-links/issues/31)
+* bump @typescript-eslint/parser from 4.3.0 to 4.4.0 (#47) ([6ffc926](https://github.com/peaceiris/actions-suggest-related-links/commit/6ffc92648295221021e8dc99d6f55823fe6d9cff)), closes [#47](https://github.com/peaceiris/actions-suggest-related-links/issues/47)
+* bump beautifulsoup4 from 4.9.1 to 4.9.3 in /models (#37) ([bf4df30](https://github.com/peaceiris/actions-suggest-related-links/commit/bf4df301190a16c2c50917d38a1a9cbf77c7209a)), closes [#37](https://github.com/peaceiris/actions-suggest-related-links/issues/37)
+* bump boto3 from 1.14.55 to 1.15.11 in /models (#41) ([543222b](https://github.com/peaceiris/actions-suggest-related-links/commit/543222b01e578f571a44f337ddf4661124ac46ec)), closes [#41](https://github.com/peaceiris/actions-suggest-related-links/issues/41)
+* bump boto3 from 1.15.11 to 1.15.12 in /models (#44) ([64251b6](https://github.com/peaceiris/actions-suggest-related-links/commit/64251b60fd40cbcd3cb3b0f34ce1bd27c1659201)), closes [#44](https://github.com/peaceiris/actions-suggest-related-links/issues/44)
+* bump boto3 from 1.15.12 to 1.15.13 in /models (#52) ([0b12e0e](https://github.com/peaceiris/actions-suggest-related-links/commit/0b12e0ead5b86863e57704dbdfee19705c4276d6)), closes [#52](https://github.com/peaceiris/actions-suggest-related-links/issues/52)
+* bump boto3 from 1.15.13 to 1.15.14 in /models (#58) ([deb6b80](https://github.com/peaceiris/actions-suggest-related-links/commit/deb6b80e4f3014d70e794aadadb7d95b12ababae)), closes [#58](https://github.com/peaceiris/actions-suggest-related-links/issues/58)
+* bump botocore from 1.17.55 to 1.18.11 in /models (#39) ([a0c71c1](https://github.com/peaceiris/actions-suggest-related-links/commit/a0c71c115f8b4cee54090004c72368d338a4713d)), closes [#39](https://github.com/peaceiris/actions-suggest-related-links/issues/39)
+* bump botocore from 1.18.11 to 1.18.12 in /models (#43) ([108d390](https://github.com/peaceiris/actions-suggest-related-links/commit/108d39056295d65778c37c9833cde32fb86d6ce4)), closes [#43](https://github.com/peaceiris/actions-suggest-related-links/issues/43)
+* bump botocore from 1.18.12 to 1.18.13 in /models (#51) ([ca3d1d1](https://github.com/peaceiris/actions-suggest-related-links/commit/ca3d1d1db2f6b30388ff60cf07ff18623b831c46)), closes [#51](https://github.com/peaceiris/actions-suggest-related-links/issues/51)
+* bump botocore from 1.18.13 to 1.18.14 in /models (#57) ([0cdf9ee](https://github.com/peaceiris/actions-suggest-related-links/commit/0cdf9eed97984dae22a12ba2e7e6eba92516a02d)), closes [#57](https://github.com/peaceiris/actions-suggest-related-links/issues/57)
+* bump docutils from 0.15.2 to 0.16 in /models (#40) ([373d638](https://github.com/peaceiris/actions-suggest-related-links/commit/373d638ccbc8c3b71efb6c23f4ffb1f93cfb8eca)), closes [#40](https://github.com/peaceiris/actions-suggest-related-links/issues/40)
+* bump eslint from 7.10.0 to 7.11.0 (#61) ([f917c45](https://github.com/peaceiris/actions-suggest-related-links/commit/f917c4597649c77199e4cb39887966aadd830bf7)), closes [#61](https://github.com/peaceiris/actions-suggest-related-links/issues/61)
+* bump eslint-plugin-jest from 24.0.2 to 24.1.0 (#45) ([babb875](https://github.com/peaceiris/actions-suggest-related-links/commit/babb87526eb1e035a66f55c2fd15b97f988ce839)), closes [#45](https://github.com/peaceiris/actions-suggest-related-links/issues/45)
+* bump jest from 26.4.2 to 26.5.0 (#46) ([1aff47d](https://github.com/peaceiris/actions-suggest-related-links/commit/1aff47d26d02d42442c026afbfe1a5da00abbe4e)), closes [#46](https://github.com/peaceiris/actions-suggest-related-links/issues/46)
+* bump jest from 26.5.0 to 26.5.2 (#53) ([8ea24f0](https://github.com/peaceiris/actions-suggest-related-links/commit/8ea24f09aa3b82119e537d52597f764aa86398be)), closes [#53](https://github.com/peaceiris/actions-suggest-related-links/issues/53)
+* bump jest from 26.5.2 to 26.5.3 (#62) ([1c9ef33](https://github.com/peaceiris/actions-suggest-related-links/commit/1c9ef33647d925610ab1b582dc531ddd9d6fcb2d)), closes [#62](https://github.com/peaceiris/actions-suggest-related-links/issues/62)
+* bump jest-circus from 26.4.2 to 26.5.1 (#49) ([3edf82a](https://github.com/peaceiris/actions-suggest-related-links/commit/3edf82a826495fd6e4f5fccdd42767f1e6af8521)), closes [#49](https://github.com/peaceiris/actions-suggest-related-links/issues/49)
+* bump jest-circus from 26.5.1 to 26.5.2 (#56) ([4243764](https://github.com/peaceiris/actions-suggest-related-links/commit/42437643003877a528d2ee4113ea586e33906944)), closes [#56](https://github.com/peaceiris/actions-suggest-related-links/issues/56)
+* bump jest-circus from 26.5.2 to 26.5.3 (#64) ([c7daa4c](https://github.com/peaceiris/actions-suggest-related-links/commit/c7daa4c437471bf31cc9046c9354495e81343665)), closes [#64](https://github.com/peaceiris/actions-suggest-related-links/issues/64)
+* bump markdown from 3.2.2 to 3.3 in /models (#50) ([0b6ba3c](https://github.com/peaceiris/actions-suggest-related-links/commit/0b6ba3cbbf1df7e7967e3d06d2e73380787e2efc)), closes [#50](https://github.com/peaceiris/actions-suggest-related-links/issues/50)
+* bump node from 12.18.4 to 12.19.0 (#65) ([5df108d](https://github.com/peaceiris/actions-suggest-related-links/commit/5df108d1332a4f213204e66f3b715a29dc0c5154)), closes [#65](https://github.com/peaceiris/actions-suggest-related-links/issues/65)
+* bump numpy from 1.19.1 to 1.19.2 in /models (#59) ([8d83df4](https://github.com/peaceiris/actions-suggest-related-links/commit/8d83df4e0f2a10a22018be6c5fe9f0a9b25d3d91)), closes [#59](https://github.com/peaceiris/actions-suggest-related-links/issues/59)
+* bump remark-parse from 8.0.3 to 9.0.0 (#67) ([d027488](https://github.com/peaceiris/actions-suggest-related-links/commit/d02748875f6012f6ba1ccc68baa4d60d6c59863f)), closes [#67](https://github.com/peaceiris/actions-suggest-related-links/issues/67)
+* bump smart-open from 2.1.1 to 2.2.1 in /models (#38) ([297aa5a](https://github.com/peaceiris/actions-suggest-related-links/commit/297aa5a21f5223a181ae9ae3cd250e7913048297)), closes [#38](https://github.com/peaceiris/actions-suggest-related-links/issues/38)
+* bump ts-jest from 26.4.0 to 26.4.1 (#33) ([a386236](https://github.com/peaceiris/actions-suggest-related-links/commit/a38623634d0615dc7faf9a70ed1aa536871c69e4)), closes [#33](https://github.com/peaceiris/actions-suggest-related-links/issues/33)
+* remove unused deps (#32) ([d0ffebb](https://github.com/peaceiris/actions-suggest-related-links/commit/d0ffebbef6ee4fa5f9847d7b783de458e2486630)), closes [#32](https://github.com/peaceiris/actions-suggest-related-links/issues/32)
+* update dev deps (#68) ([b997ac1](https://github.com/peaceiris/actions-suggest-related-links/commit/b997ac18593736b9044854ea573a0d41890e1d06)), closes [#68](https://github.com/peaceiris/actions-suggest-related-links/issues/68)
+
+### refactor
+
+* merge removeSymbols to md2text (#35) ([c312ec0](https://github.com/peaceiris/actions-suggest-related-links/commit/c312ec006b87179285b0606ac7d67d59f825ab0a)), closes [#35](https://github.com/peaceiris/actions-suggest-related-links/issues/35)
+
+
+
 ## [1.1.2](https://github.com/peaceiris/actions-suggest-related-links/compare/v1.1.1...v1.1.2) (2020-09-28)
 
 
