@@ -17,15 +17,7 @@
     "tsc": "tsc",
     "fmt": "prettier --write **/*.ts",
     "fmt:check": "prettier --check **/*.ts",
-    "release": "standard-version",
-    "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
-  },
-  "husky": {
-    "skipCI": true,
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "post-merge": "npm run update-deps; git remote prune origin"
-    }
+    "release": "standard-version"
   },
   "lint-staged": {
     "{src,__tests__}/**/*.ts": [
@@ -72,7 +64,7 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
+    "husky": "^5.0.9",
     "jest": "^26.5.3",
     "jest-circus": "^26.5.3",
     "js-yaml": "^3.14.0",
