@@ -12,6 +12,7 @@ on:
 jobs:
   action:
     runs-on: ubuntu-18.04
+    timeout-minutes: 2
     steps:
       - name: Dump GitHub context
         env:
