@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2019", // TODO: es2020 https://github.com/actions/runner/issues/772
     "module": "commonjs",
     "sourceMap": true,
     "outDir": "./actions/dist",
@@ -9,7 +9,8 @@
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules", "**/*.test.ts"]
 }
