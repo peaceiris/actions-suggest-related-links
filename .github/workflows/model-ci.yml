@@ -19,6 +19,7 @@ on:
 jobs:
   python:
     runs-on: ubuntu-18.04
+    timeout-minutes: 2
     defaults:
       run:
         working-directory: models
@@ -31,6 +32,7 @@ jobs:
 
   fasttext:
     runs-on: ubuntu-18.04
+    timeout-minutes: 5
     defaults:
       run:
         working-directory: models/fasttext
@@ -38,8 +40,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Login to Packages
         run: echo '${{ secrets.GITHUB_TOKEN }}' | docker login 'docker.pkg.github.com' -u '${{ github.repository_owner }}' --password-stdin
-      - run: docker-compose pull --quiet
-        if: github.event_name == 'pull_request'
       - run: make build
       - run: docker images
       # - run: make fmt

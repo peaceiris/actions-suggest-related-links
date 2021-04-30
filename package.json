@@ -2,11 +2,23 @@
   "name": "actions-suggest-related-links",
   "version": "1.1.3",
   "description": "A GitHub Action to suggest related or similar issues, documents, and links. Based on the power of NLP and fastText.",
-  "main": "actions/dist/index.js",
-  "engines": {
-    "node": ">=12.18.3",
-    "npm": ">=6.14.8"
+  "keywords": [
+    "GitHub Actions",
+    "Actions",
+    "JavaScript Action",
+    "TypeScript Action"
+  ],
+  "homepage": "https://github.com/peaceiris/actions-suggest-related-links#readme",
+  "bugs": {
+    "url": "https://github.com/peaceiris/actions-suggest-related-links/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peaceiris/actions-suggest-related-links.git"
+  },
+  "license": "MIT",
+  "author": "peaceiris",
+  "main": "actions/dist/index.js",
   "scripts": {
     "postinstall": "npx husky install",
     "node": "ts-node",
@@ -29,22 +41,6 @@
       "npx doctoc@2.0.0 --github"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/peaceiris/actions-suggest-related-links.git"
-  },
-  "keywords": [
-    "GitHub Actions",
-    "Actions",
-    "JavaScript Action",
-    "TypeScript Action"
-  ],
-  "author": "peaceiris",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/peaceiris/actions-suggest-related-links/issues"
-  },
-  "homepage": "https://github.com/peaceiris/actions-suggest-related-links#readme",
   "dependencies": {
     "@actions/artifact": "^0.5.1",
     "@actions/core": "^1.2.7",
@@ -57,7 +53,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@types/js-yaml": "^4.0.0",
-    "@types/node": "~12",
+    "@types/node": "~14",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "@vercel/ncc": "^0.27.0",
@@ -75,5 +71,9 @@
     "ts-jest": "^26.5.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.4"
+  },
+  "engines": {
+    "node": ">=14.16.1",
+    "npm": ">=7.11.1"
   }
 }
