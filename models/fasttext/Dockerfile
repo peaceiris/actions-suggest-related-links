@@ -10,11 +10,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /build
 ENV PIP_NO_CACHE_DIR="true"
 
-COPY Pipfile Pipfile.lock ${WORKDIR}/
+COPY Pipfile Pipfile.lock ./
 
-RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install pipenv && \
-    pipenv install --system && \
+RUN python3 -m pip install --upgrade pip pipenv && \
+    pipenv sync --dev && \
     rm -rf /build
 
 WORKDIR /src
