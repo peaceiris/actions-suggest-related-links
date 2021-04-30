@@ -1,3 +1,5 @@
 .*
 *
 !requirements.txt
+!Pipfile
+!Pipfile.lock
