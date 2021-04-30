@@ -13,7 +13,7 @@ ENV PIP_NO_CACHE_DIR="true"
 COPY Pipfile Pipfile.lock ${WORKDIR}/
 
 RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install --no-cache-dir pipenv && \
+    python3 -m pip install pipenv && \
     pipenv install --system && \
     rm -rf /build
 
