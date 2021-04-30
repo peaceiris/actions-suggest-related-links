@@ -32,7 +32,7 @@ jobs:
 
   fasttext:
     runs-on: ubuntu-18.04
-    timeout-minutes: 2
+    timeout-minutes: 5
     defaults:
       run:
         working-directory: models/fasttext
