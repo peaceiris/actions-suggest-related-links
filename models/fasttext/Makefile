@@ -8,4 +8,4 @@ run:
 
 .PHONY: train
 train:
-	docker-compose run --rm dev python train.py -d training-data.json -test input.txt
+	docker-compose run --rm dev pipenv run python train.py -d training-data.json -test input.txt
