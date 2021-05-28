@@ -20,7 +20,7 @@ jobs:
         run: echo "${GITHUB_CONTEXT}"
 
       - name: Cache dependencies
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         with:
           path: ~/actions-suggest-related-links-tmp
           key: ${{ runner.os }}-action-${{ hashFiles('~/actions-suggest-related-links-tmp/training-data.json') }}
