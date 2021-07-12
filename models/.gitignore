@@ -1,5 +1,6 @@
 .ACCESS_TOKEN
 *.txt
 !requirements.txt
+!requirements-dev.txt
 suggestions.json
 training_data/
