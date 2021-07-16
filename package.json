@@ -48,7 +48,7 @@
     "@actions/io": "^1.1.0",
     "mdast-util-to-string": "^2.0.0",
     "remark-parse": "^9.0.0",
-    "unified": "^9.2.1"
+    "unified": "^10.0.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
