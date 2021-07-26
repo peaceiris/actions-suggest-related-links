@@ -28,8 +28,8 @@
     "test": "jest --coverage --verbose --detectOpenHandles",
     "build": "ncc build ./actions/src/index.ts -o ./actions/dist --minify",
     "tsc": "tsc",
-    "fmt": "prettier --write **/*.ts",
-    "fmt:check": "prettier --check **/*.ts",
+    "fmt": "prettier --write '**/*.ts'",
+    "fmt:check": "prettier --check '**/*.ts'",
     "release": "standard-version"
   },
   "lint-staged": {
