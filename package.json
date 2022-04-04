@@ -47,7 +47,7 @@
     "@actions/github": "^4.0.0",
     "@actions/io": "^1.1.2",
     "mdast-util-to-string": "^2.0.0",
-    "remark-parse": "^9.0.0",
+    "remark-parse": "^10.0.1",
     "unified": "^9.2.1"
   },
   "devDependencies": {
