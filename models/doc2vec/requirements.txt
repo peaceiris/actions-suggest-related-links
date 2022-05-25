@@ -15,7 +15,7 @@ Markdown==3.3
 numpy==1.21.0
 pybind11==2.5.0
 PyGithub==1.53
-PyJWT==1.7.1
+PyJWT==2.4.0
 python-dateutil==2.8.1
 requests==2.24.0
 s3transfer==0.3.3
