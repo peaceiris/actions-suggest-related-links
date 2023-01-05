@@ -21,7 +21,7 @@ jobs:
 
       # https://github.com/actions/setup-node/releases
       - name: Setup Node
-        uses: actions/setup-node@v3.5.1
+        uses: actions/setup-node@v3.6.0
         with:
           node-version-file: ".nvmrc"
 
